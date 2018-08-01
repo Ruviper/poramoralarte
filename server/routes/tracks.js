@@ -1,26 +1,26 @@
 const express = require("express");
 const router = express.Router();
-const Route = require("../models/Route");
+const Track = require("../models/Track");
 
-// Retrive all routes
+// Retrive all tracks
 router.get("/", (req, res, next) => {
-  Route.find()
+  Track.find()
     .then(objects => res.json(objects))
     .catch(e => next(e));
 });
 
-// Create route
+// Create track
 router.post("/add", (req, res, next) => {
-  const { image, name, duration, price, description, audio, tracks } = req.body;
+  const { image, name, duration, price, audio, description, coordinates } = req.body;
 
-  const newRoute = { image, name, duration, price, description, audio, tracks };
+  const newTrack = { image, name, duration, price, audio, description, coordinates };
 
-  Route.create(newRoute)
+  Track.create(newTrack)
     .then(object => res.json(object))
     .catch(e => next(e));
 });
 
-// Retrive route detail
+// Retrive track detail
 router.get("/:id", (req, res, next) => {
     route.findById(req.params.id)
       .then(object => res.json(object))
@@ -28,18 +28,18 @@ router.get("/:id", (req, res, next) => {
   });
   
   router.put("/:id", (req, res, next) => {
-    const { image, name, duration, price, description, audio, tracks } = req.body;
+    const { image, name, duration, price, audio, description, coordinates } = req.body;
   
-    const updates = { image, name, duration, price, description, audio, tracks };
+    const updates = { image, name, duration, price, audio, description, coordinates };
   
-    Route.findByIdAndUpdate(req.params.id, updates, { new: true })
+    Track.findByIdAndUpdate(req.params.id, updates, { new: true })
       .then(object => res.json(object))
       .catch(e => next(e));
   });
   
-  // Delete route
+  // Delete track
   router.delete("/:id", (req, res, next) => {
-    Route.findByIdAndRemove(req.params.id)
+    Track.findByIdAndRemove(req.params.id)
       .then(() => res.json({ message: `SUCESSFUL DELETE ${req.params.id}` }))
       .catch(e => next(e));
   });

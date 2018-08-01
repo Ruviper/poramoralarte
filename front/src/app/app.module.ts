@@ -9,12 +9,19 @@ import { routes } from './routes';
 import { FormsModule } from '@angular/forms';
 import { SessionService } from '../services/session';
 import { HttpModule } from '@angular/http';
+import { RouteListComponent } from './route-list/route-list.component';
+import { RouteService } from '../services/route';
+import { HomeComponent } from './home/home.component';
+import { TrackListComponent } from './track-list/track-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    RouteListComponent,
+    TrackListComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +29,7 @@ import { HttpModule } from '@angular/http';
     FormsModule,
     HttpModule
   ],
-  providers: [SessionService],
+  providers: [SessionService, RouteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

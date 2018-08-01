@@ -3,11 +3,12 @@ const Schema   = mongoose.Schema;
 
 const routeSchema = new Schema({
   image: { type: String },
-  duration: { type: String },
   name: { type: String },
+  duration: { type: String },
   price: { type: String },
-  tracks: [{type: Schema.Types.ObjectId, ref: 'Track'}],
   description: { type: String },
+  audio: { type: String },
+  tracks: [{type: Schema.Types.ObjectId, ref: 'Track'}],
 }, 
 {
   timestamps: {

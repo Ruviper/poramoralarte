@@ -4,9 +4,10 @@ const Schema   = mongoose.Schema;
 const trackSchema = new Schema({
   image: { type: String },
   name: { type: String },
+  duration: { type: String },
   price: { type: String },
-  description: { type: String },
   audio: { type: String },
+  description: { type: String },
   coordinates: {type: "Point", coordinates: [lat, lng]}
 }, 
 {
