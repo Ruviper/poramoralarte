@@ -11,9 +11,9 @@ router.get("/", (req, res, next) => {
 
 // Create track
 router.post("/add", (req, res, next) => {
-  const { image, name, duration, price, audio, description, coordinates } = req.body;
+  const { image, name, duration, price, audio, description } = req.body;
 
-  const newTrack = { image, name, duration, price, audio, description, coordinates };
+  const newTrack = { image, name, duration, price, audio, description };
 
   Track.create(newTrack)
     .then(object => res.json(object))
@@ -22,12 +22,12 @@ router.post("/add", (req, res, next) => {
 
 // Retrive track detail
 router.get("/:id", (req, res, next) => {
-    route.findById(req.params.id)
+    Track.findById(req.params.id)
       .then(object => res.json(object))
       .catch(e => next(e));
-  });
-  
-  router.put("/:id", (req, res, next) => {
+});
+ 
+router.put("/:id", (req, res, next) => {
     const { image, name, duration, price, audio, description, coordinates } = req.body;
   
     const updates = { image, name, duration, price, audio, description, coordinates };
@@ -35,13 +35,13 @@ router.get("/:id", (req, res, next) => {
     Track.findByIdAndUpdate(req.params.id, updates, { new: true })
       .then(object => res.json(object))
       .catch(e => next(e));
-  });
+});
   
   // Delete track
-  router.delete("/:id", (req, res, next) => {
+router.delete("/:id", (req, res, next) => {
     Track.findByIdAndRemove(req.params.id)
       .then(() => res.json({ message: `SUCESSFUL DELETE ${req.params.id}` }))
       .catch(e => next(e));
-  });
+});
 
 module.exports = router;

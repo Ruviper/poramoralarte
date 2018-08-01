@@ -13,6 +13,8 @@ import { RouteListComponent } from './route-list/route-list.component';
 import { RouteService } from '../services/route';
 import { HomeComponent } from './home/home.component';
 import { TrackListComponent } from './track-list/track-list.component';
+import { TrackService } from '../services/track';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { TrackListComponent } from './track-list/track-list.component';
     LoginComponent,
     SignupComponent,
     RouteListComponent,
-    TrackListComponent
+    TrackListComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { TrackListComponent } from './track-list/track-list.component';
     FormsModule,
     HttpModule
   ],
-  providers: [SessionService, RouteService],
+  providers: [SessionService, RouteService, TrackService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

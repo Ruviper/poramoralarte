@@ -15,16 +15,16 @@
 
 <ul>
   <li>
-    <a [routerLink]="['/']">HOME</a>
+    <a [routerLink]="['/']">Inicio</a>
   </li>
   <li *ngIf="!sessionService.user">
-    <a [routerLink]="['/signup']">Signup</a>
+    <a [routerLink]="['/signup']">Registro</a>
   </li>
   <li *ngIf="!sessionService.user">
-    <a [routerLink]="['/login']">Login</a>
+    <a [routerLink]="['/login']">Iniciar sesión</a>
   </li>
   <li *ngIf="sessionService.user">
-    <a href="#" (click)="logout()">Logut</a>
+    <a href="#" (click)="logout()">Desconectar</a>
   </li>
 </ul>
 

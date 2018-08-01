@@ -4,11 +4,13 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { RouteListComponent } from './route-list/route-list.component';
 import { TrackListComponent } from './track-list/track-list.component';
+import { CommentComponent } from './comment/comment.component';
 
 export const routes: Routes = [
   { path:'', component:HomeComponent},
   { path:'signup', component:SignupComponent},
   { path:'login', component:LoginComponent},
   { path:'routes', component:RouteListComponent},
-  { path: 'routes/:id', component:TrackListComponent}
+  { path:'routes/:id', component:TrackListComponent},
+  { path:'routes/:id/comment', component:CommentComponent}
 ];

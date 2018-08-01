@@ -6,8 +6,8 @@ const routeSchema = new Schema({
   name: { type: String },
   duration: { type: String },
   price: { type: String },
-  description: { type: String },
   audio: { type: String },
+  description: { type: String },
   tracks: [{type: Schema.Types.ObjectId, ref: 'Track'}],
 }, 
 {

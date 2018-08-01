@@ -1,3 +1,15 @@
 <p>
   track-list works!
 </p>
+
+<div>
+    <div *ngFor="let track of tracks">
+    <!-- <div *ngIf="route"> -->
+      <img src="{{track.image}}" alt="">
+      <h2>{{track.name}}</h2>
+      <p>{{track.duration}}</p>
+      <p>{{track.price}}</p>
+      <p>{{track.audio}}</p>
+      <p>{{track.description}}</p>  
+    </div>
+  </div>

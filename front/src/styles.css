@@ -24,3 +24,13 @@ body {
 .intro-img {
     max-width: 100%;
 }
+
+.route-img {
+    max-width: 100%;
+}
+
+.container-route {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #2C4251;
+}

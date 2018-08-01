@@ -7,8 +7,8 @@ const trackSchema = new Schema({
   duration: { type: String },
   price: { type: String },
   audio: { type: String },
-  description: { type: String },
-  coordinates: {type: "Point", coordinates: [lat, lng]}
+  description: { type: String }
+//   coordinates: {type: "Point", coordinates: [lat, lng]}
 }, 
 {
   timestamps: {
@@ -17,5 +17,5 @@ const trackSchema = new Schema({
   }
 });
 
-const Track = mongoose.model('Track', userSchema);
+const Track = mongoose.model('Track', trackSchema);
 module.exports = Track;

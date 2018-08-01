@@ -3,17 +3,11 @@ import { Http } from "@angular/http";
 import { map } from 'rxjs/operators';
 
 @Injectable()
-  export class RouteService {
+  export class TrackService {
     BASE_URL: string = "http://localhost:3000";
     constructor(private http: Http) {}
   
-    getList() {
-      return this.http
-        .get(`${this.BASE_URL}/api/routes`)
-        .pipe(map(res => res.json()));
-    }
-
-    get(id) {
+    getList(id) {
       return this.http
         .get(`${this.BASE_URL}/api/routes/${id}`)
         .pipe(map(res => res.json()));
@@ -25,7 +19,11 @@ import { map } from 'rxjs/operators';
         .pipe(map(res => res.json()));
     }
   
-    
+    get(id) {
+      return this.http
+        .get(`${this.BASE_URL}/api/phone/${id}`)
+        .pipe(map(res => res.json()));
+    }
   
     edit(phone) {
       return this.http

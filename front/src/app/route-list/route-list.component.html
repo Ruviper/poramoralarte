@@ -2,17 +2,24 @@
   LISTA DE RUTAS
 </p>
 
-<div>
+<div class="container-route">
   <div *ngFor="let route of routes">
-    <img src="{{route.image}}" alt="">
+    <img class="route-img" src="{{route.image}}" alt="">
     <h2>{{route.name}}</h2>
-    <p>{{route.duration}}</p>
-    <p>{{route.price}}</p>
+    <p>Duración: {{route.duration}}</p>
+    <p>Precio: {{route.price}}</p>
+    <button>{{route.audio}}</button>
+    <p>Descripción: {{route.description}}</p>
+    <p>Puntos de interés:</p>
     <ul>
-      <li></li>
-      <li></li>
+      <li *ngFor="let track of route.tracks">{{track.name}}</li>
     </ul>
-    <p>{{route.description}}</p>  
+
+    <div>
+      <button>Comentarios</button>
+      <button>
+        <a [routerLink]="['/routes', route._id]">+ Info</a>
+      </button>
+    </div>
   </div>
 </div>
-
