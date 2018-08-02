@@ -16,7 +16,9 @@
     </ul>
 
     <div>
-      <button>Comentarios</button>
+      <button>
+          <a [routerLink]="['/routes', route._id, 'comments']">Comentarios</a>
+      </button>
       <button>
         <a [routerLink]="['/routes', route._id]">+ Info</a>
       </button>

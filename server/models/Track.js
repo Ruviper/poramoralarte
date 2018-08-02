@@ -5,9 +5,14 @@ const trackSchema = new Schema({
   image: { type: String },
   name: { type: String },
   duration: { type: String },
+  schedules: { type: String },
   price: { type: String },
   audio: { type: String },
-  description: { type: String }
+  description: { type: String },
+  coordinates: {
+    lat: String,
+    lng: String
+  }
 //   coordinates: {type: "Point", coordinates: [lat, lng]}
 }, 
 {

@@ -11,9 +11,9 @@ router.get("/", (req, res, next) => {
 
 // Create track
 router.post("/add", (req, res, next) => {
-  const { image, name, duration, price, audio, description } = req.body;
+  const { image, name, duration, schedules, price, audio, description, coordinates } = req.body;
 
-  const newTrack = { image, name, duration, price, audio, description };
+  const newTrack = { image, name, duration, schedules, price, audio, description, coordinates };
 
   Track.create(newTrack)
     .then(object => res.json(object))

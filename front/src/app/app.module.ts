@@ -16,6 +16,9 @@ import { TrackListComponent } from './track-list/track-list.component';
 import { TrackService } from '../services/track';
 import { CommentComponent } from './comment/comment.component';
 
+import { AgmCoreModule } from '@agm/core';
+import { CommentService } from '../services/comment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +33,12 @@ import { CommentComponent } from './comment/comment.component';
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpModule
+    HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAMr7l3yXxN3hJdhgapxECHdHDNwhfGjrY'
+    })
   ],
-  providers: [SessionService, RouteService, TrackService],
+  providers: [SessionService, RouteService, TrackService, CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,14 @@
 <p>
   comment works!
 </p>
+
+<div>
+  <div>
+    <label>Comentario</label>
+    <input [(ngModel)]="comment">
+    <button (click)="saveComment()">Enviar comentario</button>
+  </div>
+  <ul *ngFor="let comment of comments">
+      <li>{{comment.text}}</li>
+    </ul>
+</div>
