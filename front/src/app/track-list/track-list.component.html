@@ -2,16 +2,21 @@
   track-list works!
 </p>
 
-<agm-map *ngFor="let track of tracks" [latitude]="lat[0]" [longitude]="lng[0]">
-  <agm-marker [latitude]="lat[0]" [longitude]="lng[0]"></agm-marker>
-  <agm-marker [latitude]="lat[1]" [longitude]="lng[1]"></agm-marker>
+
+
+<div class="mapa">
+<agm-map [latitude]="tracks[0].coordinates.lat" [longitude]="tracks[0].coordinates.lng">
+    <div *ngFor="let track of tracks">
+  <agm-marker [latitude]="track.coordinates.lat" [longitude]="track.coordinates.lng"></agm-marker>
+</div>
 </agm-map>
+</div>
 
 
-<div>
-  <div *ngFor="let track of tracks">
-    <img src="{{track.image}}" alt="">
+<div *ngFor="let track of tracks">
+  <div class="container-track">
     <h2>{{track.name}}</h2>
+    <img class="container-track__track-image" src="{{track.image}}" alt="">
     <p>Duración: {{track.duration}}</p>
     <p>Horario: {{track.schedules}}</p>
     <p>Precio: {{track.price}}</p>

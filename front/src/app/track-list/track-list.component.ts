@@ -9,18 +9,20 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./track-list.component.css"]
 })
 export class TrackListComponent implements OnInit {
-  lat: Array<number> = [40.4137818,50.15266];
-  lng: Array<number> = [-3.6921270999999933, 10.5185458];
-  tracks: Array<any>;
+  lat: Array<number> = [40.4137818, 35.45];
+  lng: Array<number> = [-3.6921270999999933, -4.544];
+  tracks: Array<any> = [{
+    coordinates: {lat:0, lng:0}
+  }];
 
   constructor(
     private trackService: TrackService,
     public routeService: RouteService,
-    private route: ActivatedRoute
+    public route: ActivatedRoute
   ) {
     this.route.params.subscribe(params => 
       this.routeService.get(params.id).subscribe(data => {
-        this.tracks = data.tracks;
+        this.tracks = data && data.tracks;
       })
     )
   }

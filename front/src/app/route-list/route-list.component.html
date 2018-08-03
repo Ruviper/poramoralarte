@@ -4,8 +4,8 @@
 
 <div class="container-route">
   <div *ngFor="let route of routes">
-    <img class="route-img" src="{{route.image}}" alt="">
     <h2>{{route.name}}</h2>
+    <img class="route-img" src="{{route.image}}" alt="">
     <p>Duración: {{route.duration}}</p>
     <p>Precio: {{route.price}}</p>
     <button>{{route.audio}}</button>
@@ -17,7 +17,7 @@
 
     <div>
       <button>
-          <a [routerLink]="['/routes', route._id, 'comments']">Comentarios</a>
+          <a [routerLink]="['/routes', route._id,'comments']">Comentarios</a>
       </button>
       <button>
         <a [routerLink]="['/routes', route._id]">+ Info</a>

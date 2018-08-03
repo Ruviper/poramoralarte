@@ -10,7 +10,7 @@ export class RouteListComponent implements OnInit {
 
   routes: Array<any>;
 
-  constructor(private routeService : RouteService) { 
+  constructor(public routeService : RouteService) { 
     this.routeService.getList().subscribe(data => this.routes = data);
   }
 

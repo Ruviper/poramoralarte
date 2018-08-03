@@ -10,8 +10,8 @@ const trackSchema = new Schema({
   audio: { type: String },
   description: { type: String },
   coordinates: {
-    lat: String,
-    lng: String
+    lat: Number,
+    lng: Number
   }
 //   coordinates: {type: "Point", coordinates: [lat, lng]}
 }, 

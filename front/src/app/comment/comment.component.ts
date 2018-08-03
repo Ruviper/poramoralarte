@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { CommentService } from "../../services/comment";
 import { RouteService } from "../../services/route";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: "app-comment",
@@ -8,12 +9,23 @@ import { RouteService } from "../../services/route";
   styleUrls: ["./comment.component.css"]
 })
 export class CommentComponent implements OnInit {
+  route;
   comments;
   comment;
-  route;
+
   constructor(
-    private commentService: CommentService
-  ) {}
+    private commentService: CommentService,
+    private routeService: RouteService,
+    private router: Router,
+    public routeAct: ActivatedRoute
+  ) {
+    this.routeAct.params.subscribe(params =>
+      this.routeService.get(params.id).subscribe(data => {
+        this.route = data;
+        this.refreshComments();
+      })
+    );
+  }
 
   ngOnInit() {}
   refreshComments() {

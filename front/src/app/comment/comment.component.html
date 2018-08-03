@@ -4,11 +4,14 @@
 
 <div>
   <div>
-    <label>Comentario</label>
-    <input [(ngModel)]="comment">
+    <label for="title" name="title">Título</label>
+    <input [(ngModel)]="comment"><br>
+    <label for="text" name="text">Comentario</label>
+    <input [(ngModel)]="dwedwe">
     <button (click)="saveComment()">Enviar comentario</button>
   </div>
-  <ul *ngFor="let comment of comments">
-      <li>{{comment.text}}</li>
-    </ul>
+  <ul *ngFor="let c of comments">
+    <li>{{c.title}}</li>
+    <li>{{c.text}}</li>
+  </ul>
 </div>
