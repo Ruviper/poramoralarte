@@ -1,23 +1,27 @@
-<p>
+<h2>
   LISTA DE RUTAS
-</p>
+</h2>
 
-<div class="container-route">
-  <div *ngFor="let route of routes">
-    <h2>{{route.name}}</h2>
-    <img class="route-img" src="{{route.image}}" alt="">
-    <p>Duración: {{route.duration}}</p>
-    <p>Precio: {{route.price}}</p>
-    <button>{{route.audio}}</button>
-    <p>Descripción: {{route.description}}</p>
-    <p>Puntos de interés:</p>
-    <ul>
-      <li *ngFor="let track of route.tracks">{{track.name}}</li>
-    </ul>
 
+<div *ngFor="let route of routes">
+  <div class="container-route">
+    <h3 class="container-route__title">{{route.name}}</h3>
+    <img class="container-route__img" src="{{route.image}}" alt="">
     <div>
+      <p class="container-route__info">Duración</p>
+      <p class="container-route__info__details">{{route.duration}}</p>
+      <p class="container-route__info">Precio</p>
+      <p class="container-route__info__details">{{route.price}}</p>
+      <p class="container-route__info">Descripción</p>
+      <p class="container-route__info__details">{{route.description}}</p>
+      <p class="container-route__info">Puntos de interés</p>
+      <p class="container-route__info__details" *ngFor="let track of route.tracks">* {{track.name}}</p>
+    </div>
+
+    <div class="container-route__buttons">
+      <button>{{route.audio}}</button>
       <button>
-          <a [routerLink]="['/routes', route._id,'comments']">Comentarios</a>
+        <a [routerLink]="['/routes', route._id,'comments']">Comentarios</a>
       </button>
       <button>
         <a [routerLink]="['/routes', route._id]">+ Info</a>

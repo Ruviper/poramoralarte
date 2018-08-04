@@ -15,8 +15,8 @@ export class CommentService{
       .pipe(map((res) => res.json()));
   }
 
-  saveComment(id,text) {
-    return this.http.post(`${this.BASE_URL}/api/comments/routes/${id}/comments`,{text})
+  saveComment(id,comment) {
+    return this.http.post(`${this.BASE_URL}/api/comments/routes/${id}/comments`,{comment})
       .pipe(map((res) => res.json()));
   }
 }

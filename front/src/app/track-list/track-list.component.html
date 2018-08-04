@@ -5,22 +5,34 @@
 
 
 <div class="mapa">
-<agm-map [latitude]="tracks[0].coordinates.lat" [longitude]="tracks[0].coordinates.lng">
+  <agm-map [latitude]="tracks[0].coordinates.lat" [longitude]="tracks[0].coordinates.lng">
     <div *ngFor="let track of tracks">
-  <agm-marker [latitude]="track.coordinates.lat" [longitude]="track.coordinates.lng"></agm-marker>
-</div>
-</agm-map>
+      <agm-marker [latitude]="track.coordinates.lat" [longitude]="track.coordinates.lng"></agm-marker>
+    </div>
+  </agm-map>
 </div>
 
 
 <div *ngFor="let track of tracks">
   <div class="container-track">
-    <h2>{{track.name}}</h2>
-    <img class="container-track__track-image" src="{{track.image}}" alt="">
-    <p>Duración: {{track.duration}}</p>
-    <p>Horario: {{track.schedules}}</p>
-    <p>Precio: {{track.price}}</p>
-    <button>{{track.audio}}</button>
-    <p>Descripción: {{track.description}}</p>
+    <h3 class="container-track__title">{{track.name}}</h3>
+    <img class="container-track__img" src="{{track.image}}" alt="">
+    <p class="container-track__info">Duración</p>
+    <p class="container-track__info__details">{{track.duration}}</p>
+    <p class="container-track__info">Horario</p>
+    <p class="container-track__info__details">{{track.schedules}}</p>
+    <p class="container-track__info">Precio</p>
+    <p class="container-track__info__details">{{track.price}}</p>
+    <p class="container-track__info">Ubicación</p>
+    <p class="container-track__info__details">{{track.address}}</p>
+    <p class="container-track__info">Descripción</p>
+    <p class="container-track__info__details">{{track.description}}</p>
+    <div class="container-route__buttons">
+      <button>{{track.audio}}</button>
+      <button>
+        <a [routerLink]="['/routes', route._id,'comments']">Comentarios</a>
+      </button>
+    </div>
   </div>
+
 </div>

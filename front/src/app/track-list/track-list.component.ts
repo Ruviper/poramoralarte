@@ -9,8 +9,8 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./track-list.component.css"]
 })
 export class TrackListComponent implements OnInit {
-  lat: Array<number> = [40.4137818, 35.45];
-  lng: Array<number> = [-3.6921270999999933, -4.544];
+  lat: Array<number> = [40.4137818];
+  lng: Array<number> = [-3.6921270999999933];
   tracks: Array<any> = [{
     coordinates: {lat:0, lng:0}
   }];

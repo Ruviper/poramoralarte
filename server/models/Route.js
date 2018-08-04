@@ -4,6 +4,7 @@ const Schema   = mongoose.Schema;
 const routeSchema = new Schema({
   image: { type: String },
   name: { type: String },
+  address: { type: String },
   duration: { type: String },
   price: { type: String },
   audio: { type: String },

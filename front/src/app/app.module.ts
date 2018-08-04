@@ -18,6 +18,8 @@ import { CommentComponent } from './comment/comment.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { CommentService } from '../services/comment';
+import { ProfileComponent } from './profile/profile.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { CommentService } from '../services/comment';
     SignupComponent,
     RouteListComponent,
     TrackListComponent,
-    CommentComponent
+    CommentComponent,
+    ProfileComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -9,3 +9,17 @@
     <button (click)="signup(username, password)"> SIGNUP </button>
   </form>
   <p class="error"> {{ error }} </p>
+
+  <form>
+      <h2> Formulario de registro </h2>
+      <div class="form-row2">
+        <input type="text" [(ngModel)]="username" name="username" required>
+        <label alt="Label" data-placeholder="Nombre de usuario"></label>
+      </div>
+      <div class="form-row2">
+        <input type="text" [(ngModel)]="password" name="password" required>
+        <label alt="Label" data-placeholder="Contraseña"></label>
+      </div>
+      <button (click)="signup(username,password)"> Iniciar sesión </button>
+    </form>
+    <p class="error"> {{ error }} </p>

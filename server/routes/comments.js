@@ -9,14 +9,16 @@ router.get('/routes/:id', (req,res) => {
 })
 
 router.post('/routes/:id/comments', (req, res) => {
+    console.log(req.body.comment)
     const routeId = req.params.id;
-  const {text, title, ownerId, routerId} = req.body;
+  const {text, title, ownerId} = req.body.comment;
   const newComment = {
       routeId,
       text,
       title,
       ownerId
     }
+    console.log(newComment)
 
   Comment.create(newComment) 
   .then( data => res.json(data))
