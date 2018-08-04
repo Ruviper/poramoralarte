@@ -6,10 +6,10 @@ import { SessionService } from "../../services/session";
 
 @Component({
   selector: "app-comment",
-  templateUrl: "./comment.component.html",
-  styleUrls: ["./comment.component.css"]
+  templateUrl: "./comment-routes.component.html",
+  styleUrls: ["./comment-routes.component.css"]
 })
-export class CommentComponent implements OnInit {
+export class CommentRoutesComponent implements OnInit {
   route;
   comments;
   comment: any = {
@@ -37,18 +37,20 @@ export class CommentComponent implements OnInit {
   ngOnInit() {}
   refreshComments() {
     this.commentService
-      .getComments(this.route._id,)
+      .getComments(this.route._id)
       .subscribe(comments => {
-        console.log(comments)
         this.comments = comments
       });
   }
 
   saveComment() {
-    //console.log(this.comment);
+    this.comments.push(this.comment);
     this.commentService
       .saveComment(this.route._id, this.comment)
-      .subscribe(() => this.refreshComments());
+      .subscribe(() => {
+        
+        this.refreshComments();
+      });
     this.comment.title = "";
     this.comment.text = "";
   }

@@ -124,6 +124,14 @@ agm-map {
     font-size: 1rem;
 }
 
+.container-track__info__details {
+    font-size: 0.8rem;
+}
+
+.fas {
+    margin-left: 0.5rem;
+}
+
 form {
   margin: 1rem;
   padding: 1rem;

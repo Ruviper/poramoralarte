@@ -3,7 +3,7 @@ const router = express.Router();
 const Comment = require('../models/Comment');
 
 router.get('/routes/:id', (req,res) => {
-  Comment.find({route_id:req.params.id}).then(comments => 
+  Comment.find({routeId:req.params.id}).then(comments => 
      res.json(comments)
   )
 })

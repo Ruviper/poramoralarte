@@ -11,6 +11,7 @@
     <button (click)="saveComment()">Enviar comentario</button>
   </div>
   <ul *ngFor="let c of comments">
+    <li>{{c.ownerId}}</li>
     <li>{{c.title}}</li>
     <li>{{c.text}}</li>
   </ul>

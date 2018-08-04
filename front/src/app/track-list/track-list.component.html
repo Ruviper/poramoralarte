@@ -28,7 +28,7 @@
     <p class="container-track__info">Descripción</p>
     <p class="container-track__info__details">{{track.description}}</p>
     <div class="container-route__buttons">
-      <button>{{track.audio}}</button>
+      <button>{{track.audio}}<i class="fas fa-play"></i></button>
       <button>
         <a [routerLink]="['/routes', route._id,'comments']">Comentarios</a>
       </button>

@@ -14,12 +14,13 @@ import { RouteService } from '../services/route';
 import { HomeComponent } from './home/home.component';
 import { TrackListComponent } from './track-list/track-list.component';
 import { TrackService } from '../services/track';
-import { CommentComponent } from './comment/comment.component';
+import { CommentRoutesComponent } from './comment-routes/comment-routes.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { CommentService } from '../services/comment';
 import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
+import { CommentTracksComponent } from './comment-tracks/comment-tracks.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +30,10 @@ import { FooterComponent } from './footer/footer.component';
     SignupComponent,
     RouteListComponent,
     TrackListComponent,
-    CommentComponent,
+    CommentRoutesComponent,
     ProfileComponent,
-    FooterComponent
+    FooterComponent,
+    CommentTracksComponent
   ],
   imports: [
     BrowserModule,
