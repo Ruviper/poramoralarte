@@ -8,8 +8,8 @@ import { SessionService } from '../../services/session';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private sessionService: SessionService) { }
 
   ngOnInit() {
     
