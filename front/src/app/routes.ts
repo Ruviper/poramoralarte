@@ -20,5 +20,5 @@ export const routes: Routes = [
   { path:'routes', component:RouteListComponent},
   { path:'routes/:id', component:TrackListComponent},
   { path:'routes/:id/comments', component:CommentRoutesComponent},
-  { path:'routes/:id/tracks/:id/comments', component:CommentTracksComponent}  
+  { path:'track/:id/comments', component:CommentTracksComponent}  
 ];

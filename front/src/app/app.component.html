@@ -1,47 +1,63 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="navbar">
+<div class="dropdown show navbar">
   <div>
-    <svg class="navbar__burguer-menu" width="32px" height="32px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <title>Buguer Meny</title>
-      <desc>Created with Sketch.</desc>
-      <defs></defs>
-      <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
-        <path d="M3,5 L21,5" id="Line" stroke="#2C4251" stroke-width="3" fill-rule="nonzero"></path>
-        <path d="M3,12 L21,12" id="Line" stroke="#2C4251" stroke-width="3" fill-rule="nonzero"></path>
-        <path d="M3,19 L21,19" id="Line" stroke="#2C4251" stroke-width="3" fill-rule="nonzero"></path>
-      </g>
-    </svg>
+    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <svg width="32px" height="32px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>Buguer Meny</title>
+        <desc>Created with Sketch.</desc>
+        <defs></defs>
+        <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <path d="M3,5 L21,5" id="Line" stroke="#2C4251" stroke-width="3" fill-rule="nonzero"></path>
+          <path d="M3,12 L21,12" id="Line" stroke="#2C4251" stroke-width="3" fill-rule="nonzero"></path>
+          <path d="M3,19 L21,19" id="Line" stroke="#2C4251" stroke-width="3" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <ul>
+        <li *ngIf="sessionService.user">
+          <a [routerLink]="['/']">Inicio</a>
+        </li>
+        <li *ngIf="sessionService.user">
+          <a [routerLink]="['/routes']">Rutas</a>
+        </li>
+        <li *ngIf="sessionService.user">
+          <a [routerLink]="['/embassies']">Embajadas</a>
+        </li>
+      </ul>
+    </div>
   </div>
   <div>
     <img class="navbar__logo" src="../assets/LogoMakr_6ln5F7.png">
   </div>
   <div>
-    <svg class="navbar__perfil-logo" width="32px" height="32px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <title>UserI con</title>
-      <defs></defs>
-      <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <circle id="Oval" stroke="#2C4251" fill="#2C4251" fill-rule="nonzero" cx="12" cy="6" r="5"></circle>
-        <path d="M21.9459425,22.4474046 C19.7036309,15.7882235 16.3793072,12.4586329 11.9729712,12.4586329 C7.5666353,12.4586329 4.24231155,15.7882235 2,22.4474046 C6.17808254,22.9869415 9.50240628,23.25671 11.9729712,23.25671 C14.4435362,23.25671 17.7678599,22.9869415 21.9459425,22.4474046 Z"
-          id="Oval-2" stroke="#2C4251" fill="#2C4251" fill-rule="nonzero"></path>
-      </g>
-    </svg>
+    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <svg class="navbar__perfil-logo" width="32px" height="32px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>UserI con</title>
+        <defs></defs>
+        <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <circle id="Oval" stroke="#2C4251" fill="#2C4251" fill-rule="nonzero" cx="12" cy="6" r="5"></circle>
+          <path d="M21.9459425,22.4474046 C19.7036309,15.7882235 16.3793072,12.4586329 11.9729712,12.4586329 C7.5666353,12.4586329 4.24231155,15.7882235 2,22.4474046 C6.17808254,22.9869415 9.50240628,23.25671 11.9729712,23.25671 C14.4435362,23.25671 17.7678599,22.9869415 21.9459425,22.4474046 Z"
+            id="Oval-2" stroke="#2C4251" fill="#2C4251" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <div class="dropdown-menu navbar__logo__dropdown" aria-labelledby="dropdownMenuLink">
+      <ul>
+        <li *ngIf="!sessionService.user">
+          <a [routerLink]="['/signup']">Registro</a>
+        </li>
+        <li *ngIf="!sessionService.user">
+          <a [routerLink]="['/login']">Iniciar sesión</a>
+        </li>
+        <li *ngIf="sessionService.user">
+          <a href="#" (click)="logout()">Desconectar</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<ul>
-  <li>
-    <a [routerLink]="['/']">Inicio</a>
-  </li>
-  <li *ngIf="!sessionService.user">
-    <a [routerLink]="['/signup']">Registro</a>
-  </li>
-  <li *ngIf="!sessionService.user">
-    <a [routerLink]="['/login']">Iniciar sesión</a>
-  </li>
-  <li *ngIf="sessionService.user">
-    <a href="#" (click)="logout()">Desconectar</a>
-  </li>
-</ul>
 
 
 
@@ -53,55 +69,55 @@
 <!-- Footer -->
 <footer class="page-footer font-small cyan darken-3">
 
-    <!-- Footer Elements -->
-    <div class="container">
+  <!-- Footer Elements -->
+  <div class="container">
 
-      <!-- Grid row-->
-      <div class="row">
+    <!-- Grid row-->
+    <div class="row">
 
-        <!-- Grid column -->
-        <div class="col-md-12">
-          <div class="mb-5 flex-center">
+      <!-- Grid column -->
+      <div class="col-md-12">
+        <div class="mb-5 flex-center">
 
-            <!-- Facebook -->
-            <a class="fb-ic">
-              <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <!-- Twitter -->
-            <a class="tw-ic">
-              <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <!-- Google +-->
-            <a class="gplus-ic">
-              <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <!--Linkedin -->
-            <a class="li-ic">
-              <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <!--Instagram-->
-            <a class="ins-ic">
-              <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <!--Pinterest-->
-            <a class="pin-ic">
-              <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
-            </a>
-          </div>
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
         </div>
-        <!-- Grid column -->
-
       </div>
-      <!-- Grid row-->
+      <!-- Grid column -->
 
     </div>
-    <!-- Footer Elements -->
+    <!-- Grid row-->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
+  </div>
+  <!-- Footer Elements -->
 
-  </footer>
-  <!-- Footer -->
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

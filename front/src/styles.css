@@ -3,13 +3,15 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   background-color: #ededed;
 }
 
 h1 {
   text-transform: uppercase;
   text-align: center;
+  font-weight: bold;
+  margin-top: 2.5rem;
 }
 
 .intro-text {
@@ -28,21 +30,14 @@ h1 {
   padding: 0.5rem 1rem;
 }
 
-.navbar__burguer-menu:hover {
-  transition-property: box-shadow;
-  transition-duration: 1s;
-  box-shadow: 0px 0px 10px 10px #b6c649;
-}
-
 .navbar__logo {
   width: 10rem;
   height: auto;
 }
 
-.navbar__perfil-logo:hover {
-  transition-property: box-shadow;
-  transition-duration: 1s;
-  box-shadow: 0px 0px 10px 10px #b6c649;
+.dropdown-menu navbar__logo__dropdown { 
+    right: 0;
+    left: initial;
 }
 
 .intro-img {
@@ -182,12 +177,6 @@ form .form-row input[type="text"]:valid + label[data-placeholder]:after {
   background-color: white;
 }
 
-button:hover {
-  background-color: #b6c649;
-}
-
-
-
 form .form-row input[type="password"] {
     box-sizing: border-box;
     width: 100%;
@@ -222,4 +211,8 @@ form .form-row input[type="password"] {
     transform: translate(-5%, -150%) scale(0.9, 0.9);
     color: #b6c649;
     background-color: white;
+  }
+
+  li {
+      list-style: none;
   }

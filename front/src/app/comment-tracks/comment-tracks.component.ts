@@ -27,6 +27,7 @@ export class CommentTracksComponent implements OnInit {
   ) {
     this.routeAct.params.subscribe(params =>
       this.trackService.get(params.id).subscribe(data => {
+        console.log(data)
         this.track = data;
         this.refreshComments();
       })
@@ -55,3 +56,5 @@ export class CommentTracksComponent implements OnInit {
     this.comment.text = "";
   }
 }
+
+
