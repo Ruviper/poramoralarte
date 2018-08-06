@@ -21,6 +21,8 @@ import { CommentService } from '../services/comment';
 import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommentTracksComponent } from './comment-tracks/comment-tracks.component';
+import { EmbassyComponent } from './embassy/embassy.component';
+import { EmbassyService } from '../services/embassy'
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { CommentTracksComponent } from './comment-tracks/comment-tracks.componen
     CommentRoutesComponent,
     ProfileComponent,
     FooterComponent,
-    CommentTracksComponent
+    CommentTracksComponent,
+    EmbassyComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ import { CommentTracksComponent } from './comment-tracks/comment-tracks.componen
       apiKey: 'AIzaSyAMr7l3yXxN3hJdhgapxECHdHDNwhfGjrY'
     })
   ],
-  providers: [SessionService, RouteService, TrackService, CommentService],
+  providers: [SessionService, RouteService, TrackService, CommentService, EmbassyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

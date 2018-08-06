@@ -37,7 +37,7 @@ router.put("/:id", (req, res, next) => {
       .catch(e => next(e));
 });
   
-  // Delete track
+// Delete track
 router.delete("/:id", (req, res, next) => {
     Track.findByIdAndRemove(req.params.id)
       .then(() => res.json({ message: `SUCESSFUL DELETE ${req.params.id}` }))

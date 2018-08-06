@@ -8,6 +8,7 @@ import { CommentRoutesComponent } from './comment-routes/comment-routes.componen
 import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommentTracksComponent } from './comment-tracks/comment-tracks.component';
+import { EmbassyComponent } from './embassy/embassy.component';
 
 export const routes: Routes = [
   { path:'', component:HomeComponent},
@@ -15,8 +16,9 @@ export const routes: Routes = [
   { path:'signup', component:SignupComponent},
   { path:'login', component:LoginComponent},
   { path:'profile', component:ProfileComponent},
+  { path:'embassies', component:EmbassyComponent},
   { path:'routes', component:RouteListComponent},
   { path:'routes/:id', component:TrackListComponent},
   { path:'routes/:id/comments', component:CommentRoutesComponent},
-  { path:'routes/:id/tracks/:id/comments', component:CommentTracksComponent}
+  { path:'routes/:id/tracks/:id/comments', component:CommentTracksComponent}  
 ];

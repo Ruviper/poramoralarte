@@ -89,12 +89,14 @@ const genericCrud = require('./routes/genericCRUD');
 const routesRouter = require('./routes/routes');
 const tracksRouter = require('./routes/tracks');
 const commentsRouter = require('./routes/comments-routes');
+const embassyRouter = require('./routes/embassy');
 app.use('/api/auth', authRouter);
 app.use('/api/news', genericCrud(require('./models/News')));
 app.use('/api/user', genericCrud(require('./models/User')));
 app.use('/api/routes', routesRouter);
 app.use('/api/tracks', tracksRouter);
 app.use('/api/comments', commentsRouter);
+app.use('/api/embassies', embassyRouter);
 
 
 

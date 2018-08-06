@@ -13,7 +13,6 @@ const trackSchema = new Schema({
     lat: Number,
     lng: Number
   }
-//   coordinates: {type: "Point", coordinates: [lat, lng]}
 }, 
 {
   timestamps: {

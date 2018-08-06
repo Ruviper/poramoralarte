@@ -3,7 +3,9 @@ const router = express.Router();
 const Comment = require("../models/Comment");
 
 router.get("/routes/:id", (req, res) => {
-  Comment.find({ routeId: req.params.id }).then(comments => res.json(comments));
+  Comment.find({ routeId: req.params.id })
+  .populate('ownerId')
+  .then(comments => res.json(comments));
 });
 
 router.post("/routes/:id/comments", (req, res) => {
