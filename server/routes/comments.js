@@ -23,4 +23,36 @@ router.post("/routes/:id/comments", (req, res) => {
     .then(data => res.json(data))
     .catch(err => console.log(err));
 });
+
+
+
+
+router.get("/tracks/:id", (req, res) => {
+  Comment.find({ trackId: req.params.id })
+  .populate('ownerId')
+  .then(comments => res.json(comments));
+});
+
+router.post("/tracks/:id/comments", (req, res) => {
+  const trackId = req.params.id;
+  const { text, title, ownerId } = req.body.comment;
+  const newComment = {
+    trackId,
+    text,
+    title,
+    ownerId
+  };
+  console.log(newComment);
+
+  Comment.create(newComment)
+    .then(data => res.json(data))
+    .catch(err => console.log(err));
+});
+
+
+
+
+
+
+
 module.exports = router;

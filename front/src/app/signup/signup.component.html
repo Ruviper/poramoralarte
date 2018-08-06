@@ -1,25 +1,13 @@
 <form>
-    <h2> Signup </h2>
-    <label> Username </label>
-    <input type="text" [(ngModel)]="username" name="username"/>
-    <br>
-    <label> Password </label>
-    <input type="password" [(ngModel)]="password" name="password"/>
-
-    <button (click)="signup(username, password)"> SIGNUP </button>
-  </form>
-  <p class="error"> {{ error }} </p>
-
-  <form>
-      <h2> Formulario de registro </h2>
-      <div class="form-row2">
-        <input type="text" [(ngModel)]="username" name="username" required>
-        <label alt="Label" data-placeholder="Nombre de usuario"></label>
-      </div>
-      <div class="form-row2">
-        <input type="text" [(ngModel)]="password" name="password" required>
-        <label alt="Label" data-placeholder="Contraseña"></label>
-      </div>
-      <button (click)="signup(username,password)"> Iniciar sesión </button>
-    </form>
-    <p class="error"> {{ error }} </p>
+  <h2> Formulario de registro </h2>
+  <div class="form-row">
+    <input type="text" [(ngModel)]="username" name="username" required>
+    <label alt="Label" data-placeholder="Nombre de usuario"></label>
+  </div>
+  <div class="form-row">
+    <input type="password" [(ngModel)]="password" name="password" required>
+    <label alt="Label" data-placeholder="Contraseña"></label>
+  </div>
+  <button (click)="signup(username,password)"> Iniciar sesión </button>
+</form>
+<p class="error"> {{ error }} </p>

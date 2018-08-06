@@ -10,14 +10,18 @@ Track.collection.drop();
 
 const tracks = [
   {
-    name: "Madrid de los Austrias",
+    name: "Museo del Prado",
     image:
       "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
     duration: "5 horas",
+    schedules: "09:00 a 14:00 / 17:00 a 20:30",
     price: "50 €",
-    description: "Una ruta muy chula",
-    tracks: "",
-    audio: "asdasd"
+    audio: "Audio",
+    description: "Un museo espectacular",
+    coordinates: {
+        lat: 50.46,
+        lng: -4.5
+    }
   },
 ];
 

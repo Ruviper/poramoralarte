@@ -12,6 +12,12 @@ import { map } from 'rxjs/operators';
         .get(`${this.BASE_URL}/api/routes/${id}`)
         .pipe(map(res => res.json()));
     }
+
+    get(id) {
+      return this.http
+        .get(`${this.BASE_URL}/api/tracks/${id}`)
+        .pipe(map(res => res.json()));
+    }
   
     /* newPhone(phone) {
       return this.http

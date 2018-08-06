@@ -1,3 +1,19 @@
 <p>
-  comment-tracks works!
-</p>
+    comment works!
+  </p>
+  
+  <div>
+    <div>
+      <label for="title" name="title">Título</label>
+      <input [(ngModel)]="comment.title"><br>
+      <label for="text" name="text">Texto</label>
+      <input [(ngModel)]="comment.text">
+      <button (click)="saveComment()">Enviar comentario</button>
+    </div>
+    <ul *ngFor="let c of comments">
+      <li>{{c.ownerId.username}}</li>
+      <li>{{c.title}}</li>
+      <li>{{c.text}}</li>
+    </ul>
+  </div>
+  

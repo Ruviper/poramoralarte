@@ -88,7 +88,7 @@ const authRouter = require('./routes/auth');
 const genericCrud = require('./routes/genericCRUD');
 const routesRouter = require('./routes/routes');
 const tracksRouter = require('./routes/tracks');
-const commentsRouter = require('./routes/comments-routes');
+const commentsRouter = require('./routes/comments');
 const embassyRouter = require('./routes/embassy');
 app.use('/api/auth', authRouter);
 app.use('/api/news', genericCrud(require('./models/News')));

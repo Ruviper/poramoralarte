@@ -37,7 +37,7 @@ export class CommentRoutesComponent implements OnInit {
   ngOnInit() {}
   refreshComments() {
     this.commentService
-      .getComments(this.route._id)
+      .getComments(this.route._id, 'routes')
       .subscribe(comments => {
         this.comments = comments
       });
@@ -46,7 +46,7 @@ export class CommentRoutesComponent implements OnInit {
   saveComment() {
     this.comments.push(this.comment);
     this.commentService
-      .saveComment(this.route._id, this.comment)
+      .saveComment(this.route._id, this.comment, 'routes')
       .subscribe(() => {
         
         this.refreshComments();

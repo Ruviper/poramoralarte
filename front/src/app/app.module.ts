@@ -32,10 +32,10 @@ import { EmbassyService } from '../services/embassy'
     SignupComponent,
     RouteListComponent,
     TrackListComponent,
+    CommentTracksComponent,
     CommentRoutesComponent,
     ProfileComponent,
     FooterComponent,
-    CommentTracksComponent,
     EmbassyComponent
   ],
   imports: [
