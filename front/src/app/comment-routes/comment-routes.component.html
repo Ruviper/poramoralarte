@@ -4,15 +4,20 @@
 
 <div>
   <div>
-    <label for="title" name="title">Título</label>
+    <label for="title" name="title">Asunto</label>
     <input [(ngModel)]="comment.title"><br>
     <label for="text" name="text">Texto</label>
     <input [(ngModel)]="comment.text">
     <button (click)="saveComment()">Enviar comentario</button>
   </div>
-  <ul *ngFor="let c of comments">
+  <div class="container-comment">
+    <div *ngFor="let c of comments" class="container-comment__div">
+  <ul class="container-comment__ul">
     <li>{{c.ownerId.username}}</li>
     <li>{{c.title}}</li>
     <li>{{c.text}}</li>
+    <button (click)="deleteComment()">Eliminar comentario</button>
   </ul>
+</div>
+</div>
 </div>

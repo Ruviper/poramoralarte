@@ -9,9 +9,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommentTracksComponent } from './comment-tracks/comment-tracks.component';
 import { EmbassyComponent } from './embassy/embassy.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 export const routes: Routes = [
   { path:'', component:HomeComponent},
+  { path:'', component: NavbarComponent},
   { path:'', component:FooterComponent},
   { path:'signup', component:SignupComponent},
   { path:'login', component:LoginComponent},

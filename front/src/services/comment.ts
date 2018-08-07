@@ -35,4 +35,10 @@ export class CommentService {
         .pipe(map(res => res.json()));
     }
   }
+
+  remove(id) {
+    return this.http
+      .delete(`${this.BASE_URL}/api/comments/routes/${id}/comments`)
+      .pipe(map(res => res.json()));
+  } 
 }

@@ -22,7 +22,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommentTracksComponent } from './comment-tracks/comment-tracks.component';
 import { EmbassyComponent } from './embassy/embassy.component';
-import { EmbassyService } from '../services/embassy'
+import { EmbassyService } from '../services/embassy';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EmbassyService } from '../services/embassy'
     CommentRoutesComponent,
     ProfileComponent,
     FooterComponent,
-    EmbassyComponent
+    EmbassyComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

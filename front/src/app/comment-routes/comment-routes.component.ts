@@ -35,6 +35,7 @@ export class CommentRoutesComponent implements OnInit {
   }
 
   ngOnInit() {}
+
   refreshComments() {
     this.commentService
       .getComments(this.route._id, 'routes')
@@ -42,6 +43,12 @@ export class CommentRoutesComponent implements OnInit {
         this.comments = comments
       });
   }
+
+  deleteComment() {
+    this.commentService
+      .remove(this.route._id)
+      .subscribe(() => this.router.navigate([""]));
+  } 
 
   saveComment() {
     this.comments.push(this.comment);
