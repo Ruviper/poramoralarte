@@ -46,6 +46,16 @@ h1 {
   background-color: #fff;
 }
 
+.route-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.95rem;
+  margin: 2.3rem 0;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-color: #b6c649;
+}
+
 .container-route {
   margin: 0 1rem 1rem 1rem;
   padding: 1rem 1rem 1rem 1rem;
@@ -66,12 +76,12 @@ h1 {
 .container-route__img {
   width: 100%;
   margin-bottom: 2rem;
+  max-height: 20rem;
 }
 
 .container-route__info {
   text-transform: uppercase;
   font-weight: bold;
-  text-decoration-line: underline;
   font-size: 1.4rem;
 }
 
@@ -93,6 +103,7 @@ agm-map {
 .mapa {
   margin: 0.5rem;
   border: 2px solid #2c4251;
+  margin: 2.5rem 0;
 }
 
 .container-track {
@@ -102,6 +113,7 @@ agm-map {
   box-shadow: 4px 4px 8px #888888;
   border-radius: 2%;
   text-align: center;
+  line-height: 1rem;
 }
 
 .container-track__title {
@@ -119,7 +131,6 @@ agm-map {
 .container-track__info {
   text-transform: uppercase;
   font-weight: bold;
-  text-decoration-line: underline;
   font-size: 1.4rem;
 }
 
@@ -222,7 +233,7 @@ li {
 }
 
 .container-comment {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .container-comment__div {
@@ -230,8 +241,36 @@ li {
   margin-right: 0.5rem;
 }
 
-.container-comment__ul {
-  border: 1px solid black;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.container-comment__div__ul {
+  margin: 0 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #fff;
+  box-shadow: 4px 4px 8px #888888;
+  border-radius: 2%;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.container-embassy {
+  margin: 0 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #fff;
+  box-shadow: 4px 4px 8px #888888;
+  border-radius: 2%;
+  text-align: center;
+}
+
+.container-embassy__title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.container-embassy__info {
+  margin: 0;
+}
+
+/*SOBREESCRIBIR BOOSTRAP*/
+
+.dropdown-toggle::after {
+  display: none !important;
 }

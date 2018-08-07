@@ -1,5 +1,5 @@
-<h2>
-  LISTA DE RUTAS
+<h2 class="route-title">
+  lista de rutas culturales
 </h2>
 
 
@@ -19,7 +19,9 @@
     </div>
 
     <div class="container-route__buttons">
-      <button>{{route.audio}}<i class="fas fa-play"></i></button>
+      <button>{{route.audio}}
+        <i class="fas fa-play"></i>
+      </button>
       <button>
         <a [routerLink]="['/routes', route._id,'comments']">Comentarios</a>
       </button>

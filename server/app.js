@@ -98,6 +98,8 @@ app.use('/api/tracks', tracksRouter);
 app.use('/api/comments', commentsRouter);
 app.use('/api/embassies', embassyRouter);
 
-
+app.use(function(req, res) {
+  res.sendfile(__dirname + '/public/index.html');
+ });
 
 module.exports = app;
