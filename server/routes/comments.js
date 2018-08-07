@@ -4,8 +4,8 @@ const Comment = require("../models/Comment");
 
 router.get("/routes/:id", (req, res) => {
   Comment.find({ routeId: req.params.id })
-  .populate('ownerId')
-  .then(comments => res.json(comments));
+    .populate("ownerId")
+    .then(comments => res.json(comments));
 });
 
 router.post("/routes/:id/comments", (req, res) => {
@@ -24,13 +24,10 @@ router.post("/routes/:id/comments", (req, res) => {
     .catch(err => console.log(err));
 });
 
-
-
-
 router.get("/tracks/:id", (req, res) => {
   Comment.find({ trackId: req.params.id })
-  .populate('ownerId')
-  .then(comments => res.json(comments));
+    .populate("ownerId")
+    .then(comments => res.json(comments));
 });
 
 router.post("/tracks/:id/comments", (req, res) => {
@@ -49,10 +46,18 @@ router.post("/tracks/:id/comments", (req, res) => {
     .catch(err => console.log(err));
 });
 
-
-
-
-
-
+router.delete("/:id", (req, res, next) => {
+  console.log(req.params.id)
+  const { id } = req.params;
+  Comment.findByIdAndRemove(id)
+    .then(obj => {
+      if (obj) {
+        res.status(200).json({ status: `Removed from db` });
+      } else {
+        throw new Error("Not existing ID");
+      }
+    })
+    .catch(e => next(e));
+});
 
 module.exports = router;

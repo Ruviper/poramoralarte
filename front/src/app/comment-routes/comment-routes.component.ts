@@ -44,9 +44,9 @@ export class CommentRoutesComponent implements OnInit {
       });
   }
 
-  deleteComment() {
+  deleteComment(id) {
     this.commentService
-      .remove(this.route._id)
+      .remove(id)
       .subscribe(() => this.router.navigate([""]));
   } 
 

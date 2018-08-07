@@ -38,7 +38,7 @@ export class CommentService {
 
   remove(id) {
     return this.http
-      .delete(`${this.BASE_URL}/api/comments/routes/${id}/comments`)
+      .delete(`${this.BASE_URL}/api/comments/${id}`)
       .pipe(map(res => res.json()));
   } 
 }

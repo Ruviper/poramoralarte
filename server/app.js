@@ -84,6 +84,13 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 
+
+// mongodb://ruviper:tfkpcfyC85@ds151169.mlab.com:51169/poramoralarte
+
+// mongodb://localhost/poramoralarte
+
+
+
 const authRouter = require('./routes/auth');
 const genericCrud = require('./routes/genericCRUD');
 const routesRouter = require('./routes/routes');
