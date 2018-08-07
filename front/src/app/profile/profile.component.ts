@@ -9,7 +9,7 @@ import { SessionService } from '../../services/session';
 })
 export class ProfileComponent implements OnInit {
   
-  constructor(private sessionService: SessionService) { }
+  constructor(public sessionService: SessionService) { }
 
   ngOnInit() {
     

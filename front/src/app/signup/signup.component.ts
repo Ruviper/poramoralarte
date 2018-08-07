@@ -8,13 +8,15 @@ import { Router } from '../../../node_modules/@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-
+  username;
+  password;
+  error;
   constructor(private sessionService:SessionService, private router:Router) { }
 
   ngOnInit() {
   }
 
-  signup(username:string, password:string){
+  signup(username:string, password:string){ 
     console.log("signup....");
     this.sessionService.signup(username,password).subscribe( (user:any) =>{
       console.log(`WELCOME USER ${user.username}, register OK`);
