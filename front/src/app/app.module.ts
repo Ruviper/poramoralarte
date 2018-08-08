@@ -24,6 +24,7 @@ import { CommentTracksComponent } from './comment-tracks/comment-tracks.componen
 import { EmbassyComponent } from './embassy/embassy.component';
 import { EmbassyService } from '../services/embassy';
 import { NavbarComponent } from './navbar/navbar.component';
+import { VisitComponent } from './visit/visit.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProfileComponent,
     FooterComponent,
     EmbassyComponent,
-    NavbarComponent
+    NavbarComponent,
+    VisitComponent
   ],
   imports: [
     BrowserModule,

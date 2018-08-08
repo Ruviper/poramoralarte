@@ -21,6 +21,9 @@
           <a [routerLink]="['/routes']">Rutas</a>
         </li>
         <li *ngIf="sessionService.user">
+            <a [routerLink]="['/visits']">Puntos de interés</a>
+          </li>
+        <li *ngIf="sessionService.user">
           <a [routerLink]="['/embassies']">Embajadas</a>
         </li>
       </ul>

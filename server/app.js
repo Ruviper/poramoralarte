@@ -97,6 +97,7 @@ const routesRouter = require('./routes/routes');
 const tracksRouter = require('./routes/tracks');
 const commentsRouter = require('./routes/comments');
 const embassyRouter = require('./routes/embassy');
+const visitRouter = require('./routes/visit')
 app.use('/api/auth', authRouter);
 app.use('/api/news', genericCrud(require('./models/News')));
 app.use('/api/user', genericCrud(require('./models/User')));
@@ -104,6 +105,7 @@ app.use('/api/routes', routesRouter);
 app.use('/api/tracks', tracksRouter);
 app.use('/api/comments', commentsRouter);
 app.use('/api/embassies', embassyRouter);
+app.use('api/visits',visitRouter);
 
 app.use(function(req, res) {
   res.sendfile(__dirname + '/public/index.html');

@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CommentTracksComponent } from './comment-tracks/comment-tracks.component';
 import { EmbassyComponent } from './embassy/embassy.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { VisitComponent } from './visit/visit.component';
 
 export const routes: Routes = [
   { path:'', component:HomeComponent},
@@ -19,6 +20,7 @@ export const routes: Routes = [
   { path:'login', component:LoginComponent},
   { path:'profile', component:ProfileComponent},
   { path:'embassies', component:EmbassyComponent},
+  { path:'visits', component:VisitComponent},
   { path:'routes', component:RouteListComponent},
   { path:'routes/:id', component:TrackListComponent},
   { path:'routes/:id/comments', component:CommentRoutesComponent},

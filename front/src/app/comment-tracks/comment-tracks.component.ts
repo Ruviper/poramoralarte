@@ -47,7 +47,7 @@ export class CommentTracksComponent implements OnInit {
   deleteComment(id) {
     this.commentService
       .remove(id)
-      .subscribe(() => this.router.navigate([""]));
+      .subscribe(() => this.refreshComments());
   }
 
   saveComment() {
