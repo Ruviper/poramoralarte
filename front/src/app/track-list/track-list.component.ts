@@ -22,6 +22,7 @@ export class TrackListComponent implements OnInit {
   ) {
     this.route.params.subscribe(params => 
       this.routeService.get(params.id).subscribe(data => {
+        console.log(data.tracks)
         this.tracks = data && data.tracks;
       })
     )

@@ -1,13 +1,17 @@
 <div class="mapa">
   <agm-map [latitude]="embassies[0].coordinates.lat" [longitude]="embassies[0].coordinates.lng">
     <div *ngFor="let embassy of embassies">
-      <agm-marker [latitude]="embassy.coordinates.lat" [longitude]="embassy.coordinates.lng"></agm-marker>
+      <agm-marker [latitude]="embassy.coordinates.lat" [longitude]="embassy.coordinates.lng">
+        <agm-info-window [disableAutoPan]="true" [isOpen]="visible">
+          <strong>{{embassy.name}}</strong>
+        </agm-info-window>
+      </agm-marker>
     </div>
   </agm-map>
 </div>
 
 <div *ngFor='let embassy of embassies'>
-  <div class="container-embassy"> 
+  <div class="container-embassy">
     <h3 class="container-embassy__title">{{embassy.name}}</h3>
     <p class="container-embassy__info">{{embassy.schedules}}</p>
   </div>

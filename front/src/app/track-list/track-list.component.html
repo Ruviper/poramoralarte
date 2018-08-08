@@ -1,12 +1,14 @@
-<a href="">Volver a lista de rutas</a>
 <div class="mapa">
   <agm-map [latitude]="tracks[0].coordinates.lat" [longitude]="tracks[0].coordinates.lng">
     <div *ngFor="let track of tracks">
-      <agm-marker [latitude]="track.coordinates.lat" [longitude]="track.coordinates.lng"></agm-marker>
+      <agm-marker [latitude]="track.coordinates.lat" [longitude]="track.coordinates.lng">
+        <agm-info-window [disableAutoPan]="true" [isOpen]="visible">
+          <strong>{{track.name}}</strong>
+        </agm-info-window>
+      </agm-marker>
     </div>
   </agm-map>
 </div>
-
 
 <div *ngFor="let track of tracks">
   <div class="container-track">

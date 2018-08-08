@@ -11,6 +11,7 @@ import { CommentTracksComponent } from './comment-tracks/comment-tracks.componen
 import { EmbassyComponent } from './embassy/embassy.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { VisitComponent } from './visit/visit.component';
+import { VisitInfoComponent } from './visit-info/visit-info.component';
 
 export const routes: Routes = [
   { path:'', component:HomeComponent},
@@ -24,5 +25,6 @@ export const routes: Routes = [
   { path:'routes', component:RouteListComponent},
   { path:'routes/:id', component:TrackListComponent},
   { path:'routes/:id/comments', component:CommentRoutesComponent},
-  { path:'track/:id/comments', component:CommentTracksComponent}  
+  { path:'track/:id/comments', component:CommentTracksComponent},   
+  { path:'visits/:id', component:VisitInfoComponent}
 ];

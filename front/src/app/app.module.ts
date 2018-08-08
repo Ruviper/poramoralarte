@@ -25,6 +25,7 @@ import { EmbassyComponent } from './embassy/embassy.component';
 import { EmbassyService } from '../services/embassy';
 import { NavbarComponent } from './navbar/navbar.component';
 import { VisitComponent } from './visit/visit.component';
+import { VisitInfoComponent } from './visit-info/visit-info.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { VisitComponent } from './visit/visit.component';
     FooterComponent,
     EmbassyComponent,
     NavbarComponent,
-    VisitComponent
+    VisitComponent,
+    VisitInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+<p>
+  visit-info works!
+</p>
+
+<div class="mapa" *ngIf="mapOn">
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <div *ngFor="let visit of visits">
+      <agm-marker [latitude]="visit.location.lat" [longitude]="visit.location.lng">
+        <agm-info-window [disableAutoPan]="true" [isOpen]="visible">
+          <strong>hola</strong>
+        </agm-info-window>
+      </agm-marker>
+    </div>
+  </agm-map>
+</div>
+
+<div *ngFor="let visit of visits">
+    <div class="container-visit">
+      <h3 class="container-visit__title">{{visit.name}}</h3>
+      <div class="container-visit__img">
+        <img src="{{visit.thumbnail_url}}" alt="">
+      </div>
+      <p class="container-visit__info">{{visit.perex}}</p>
+      <p class="container-visit__info">{{visit.address}}</p>
+      <div class="container-visit__button">
+      </div>
+    </div>
+  
+  </div>
