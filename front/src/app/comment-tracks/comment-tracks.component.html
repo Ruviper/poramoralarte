@@ -1,17 +1,12 @@
-<p>
-  comment works!
-</p>
-
 <div>
-  <div>
-    <label for="text" name="text">Texto</label>
-    <input [(ngModel)]="comment.text">
+  <div class="container-comment-text">
+      <textarea [(ngModel)]="comment.text" name="" id="" cols="30" rows="5" placeholder="Escribe tu comentario"></textarea>
     <button (click)="saveComment()">Enviar comentario</button>
   </div>
   <div class="container-comment">
-    <div *ngFor="let c of comments" class="container-comment__div">
-      <ul class="container-comment__div__ul">
-        <li>{{c.ownerId.username}}</li>
+    <div *ngFor="let c of comments" class="container-comment__box">
+      <ul class="container-comment__box__ul">
+          <li class="container-comment__box__ul__username">{{c.ownerId.username}}</li>
         <li>{{c.text}}</li>
         <button (click)="deleteComment(c._id)">Eliminar comentario</button>
       </ul>

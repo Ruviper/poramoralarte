@@ -1,0 +1,29 @@
+.container-comment-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.container-comment {
+margin: 2.5rem 0;
+}
+
+.container-comment__box {
+margin-left: 0.5rem;
+margin-right: 0.5rem;
+}
+
+.container-comment__box__ul {
+margin: 0 1rem 1rem 1rem;
+padding: 1rem 1rem 1rem 1rem;
+background-color: #fff;
+box-shadow: 4px 4px 8px #888888;
+border-radius: 2%;
+text-align: center;
+line-height: 1rem;
+}
+
+.container-comment__box__ul__username {
+  font-weight: bold;
+}

@@ -1,0 +1,62 @@
+.route-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.95rem;
+  margin: 2.3rem 0;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-color: #b6c649;
+}
+
+.container-route {
+  margin: 0 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #fff;
+  box-shadow: 4px 4px 8px #888888;
+  border-radius: 2%;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.container-route__title {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.container-route__img {
+  width: 100%;
+  margin-bottom: 2rem;
+  max-height: 20rem;
+}
+
+.container-route__info {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.container-route__info__details {
+  font-size: 1rem;
+}
+
+.container-route-button {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0 1rem 0;
+}
+
+.container-route-button__button {
+  padding: 1rem;
+  border: 2px solid black;
+}
+
+.container-route-button__button__link {
+    color: black;
+}
+
+.fas {
+  margin-left: 0.5rem;
+  color: #b6c649;
+}

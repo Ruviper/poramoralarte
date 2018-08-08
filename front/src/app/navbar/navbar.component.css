@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  align-items: center;
+  border-bottom: 3px solid #2c4251;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.navbar__logo {
+  width: 10rem;
+  height: auto;
+}
+
+.navbar__logo__dropdown {
+  right: 0;
+  left: initial;
+}
+
+.dropdown-toggle {
+  border: 2px solid black;
+}
+
+/*SOBREESCRIBIR BOOSTRAP*/
+
+.dropdown-toggle::after {
+  display: none !important;
+}

@@ -5,6 +5,7 @@ const Comment = require("../models/Comment");
 router.get("/routes/:id", (req, res) => {
   Comment.find({ routeId: req.params.id })
     .populate("ownerId")
+    .sort({created_at: -1})
     .then(comments => res.json(comments));
 });
 
@@ -27,6 +28,7 @@ router.post("/routes/:id/comments", (req, res) => {
 router.get("/tracks/:id", (req, res) => {
   Comment.find({ trackId: req.params.id })
     .populate("ownerId")
+    .sort({created_at: -1})
     .then(comments => res.json(comments));
 });
 

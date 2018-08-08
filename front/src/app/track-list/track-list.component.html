@@ -21,10 +21,12 @@
     <p class="container-track__info__details">{{track.address}}</p>
     <p class="container-track__info">Descripción</p>
     <p class="container-track__info__details">{{track.description}}</p>
-    <div class="container-route__buttons">
-      <button>{{track.audio}}<i class="fas fa-play"></i></button>
-      <button>
-        <a [routerLink]="['/track', track._id,'comments']">Comentarios</a>
+    <div class="container-track-button">
+      <button class="container-route-button__button">{{track.audio}}
+        <i class="fas fa-play"></i>
+      </button>
+      <button class="container-route-button__button">
+        <a [routerLink]="['/track', track._id,'comments']" class="container-route-button__button__link">Comentarios</a>
       </button>
     </div>
   </div>

@@ -1,0 +1,25 @@
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2.5rem;
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  padding: 0 3rem;
+}
+
+.container-introimg {
+  display: flex;
+  justify-content: center;
+}
+
+.container-introimg__img {
+  max-width: 80vw;
+  padding: 1rem;
+  background-color: #fff;
+  margin-bottom: 2rem;
+}
