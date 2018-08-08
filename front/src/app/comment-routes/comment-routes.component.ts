@@ -31,31 +31,30 @@ export class CommentRoutesComponent implements OnInit {
         this.refreshComments();
       })
     );
-    this.sessionService.isLogged().subscribe(user => this.comment.ownerId = user._id)
+    this.sessionService
+      .isLogged()
+      .subscribe(user => (this.comment.ownerId = user._id));
   }
 
   ngOnInit() {}
 
   refreshComments() {
     this.commentService
-      .getComments(this.route._id, 'routes')
+      .getComments(this.route._id, "routes")
       .subscribe(comments => {
-        this.comments = comments
+        this.comments = comments;
       });
   }
 
   deleteComment(id) {
-    this.commentService
-      .remove(id)
-      .subscribe(() => this.refreshComments());
-  } 
+    this.commentService.remove(id).subscribe(() => this.refreshComments());
+  }
 
   saveComment() {
     this.comments.push(this.comment);
     this.commentService
-      .saveComment(this.route._id, this.comment, 'routes')
+      .saveComment(this.route._id, this.comment, "routes")
       .subscribe(() => {
-        
         this.refreshComments();
       });
     this.comment.title = "";
