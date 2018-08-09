@@ -30,7 +30,6 @@ export class VisitInfoComponent implements OnInit {
     public routeAct: ActivatedRoute
   ) {
     this.routeAct.params.subscribe(params => {
-      console.log(params.id);
       this.visitService.getPlaces(params.id).subscribe(visitPlace => {
         this.visit = visitPlace;
         this.lat = this.visit.location.lat;
@@ -39,7 +38,6 @@ export class VisitInfoComponent implements OnInit {
         this.visit.video = this.visit.main_media.media.filter(
           e => e["type"] == "video"
         )[0].url;
-        console.log(this.visit.video);
       });
     });
   }

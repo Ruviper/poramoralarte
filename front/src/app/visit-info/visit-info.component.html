@@ -11,7 +11,7 @@
 </div>
 <div *ngIf="visit">
   <div class="container-visit-info">
-    <iframe [src]="visit.video | safe" height="250" width="250"></iframe>
+    <iframe *ngIf='visit.video' [src]="visit.video | safe" height="250" width="250"></iframe>
     <h3 class="container-visit-info__title">{{visit.name}}</h3>
     <p>{{visit.description.text}}</p>
     <p class="container-visit-info__info">
