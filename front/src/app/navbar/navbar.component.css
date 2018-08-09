@@ -31,3 +31,8 @@
 .btn {
   box-shadow: none !important;
 }
+
+div.disabled{
+    pointer-events: none;
+    cursor: not-allowed; 
+}
