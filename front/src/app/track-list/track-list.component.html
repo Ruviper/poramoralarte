@@ -1,5 +1,5 @@
 <div class="mapa">
-  <agm-map [latitude]="tracks[0].coordinates.lat" [longitude]="tracks[0].coordinates.lng">
+  <agm-map [latitude]="tracks[0].coordinates.lat" [longitude]="tracks[0].coordinates.lng" [zoom]="zoom">
     <div *ngFor="let track of tracks">
       <agm-marker [latitude]="track.coordinates.lat" [longitude]="track.coordinates.lng">
         <agm-info-window [disableAutoPan]="true" [isOpen]="visible">
@@ -9,7 +9,6 @@
     </div>
   </agm-map>
 </div>
-
 <div *ngFor="let track of tracks">
   <div class="container-track">
     <h3 class="container-track__title">{{track.name}}</h3>
@@ -23,15 +22,17 @@
     <p class="container-track__info">Dirección</p>
     <p class="container-track__info__details">{{track.address}}</p>
     <p class="container-track__info">Descripción</p>
-    <p class="container-track__info__details">{{track.description}}</p>
-    <div class="container-track-button">
-      <button class="container-route-button__button">{{track.audio}}
-        <i class="fas fa-play"></i>
-      </button>
-      <button class="container-route-button__button">
-        <a [routerLink]="['/track', track._id,'comments']" class="container-route-button__button__link">Comentarios</a>
-      </button>
+    <p class="container-track__info__justify">{{track.description}}</p>
+    <div class="container-button">
+      <div class="container-button__audio">
+        <audio *ngIf="route.audio" [src]="route.audio" controls></audio>
+        <audio *ngIf="!route.audio" controls></audio>
+      </div>
+      <div class="container-button__buttons">
+        <button class="container-button__buttons_button">
+          <a [routerLink]="['/track', track._id,'comments']" class="container-button__buttons__button__link">Comentarios</a>
+        </button>
+      </div>
     </div>
   </div>
-
 </div>

@@ -1,11 +1,9 @@
 .route-title {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.95rem;
+  font-size: 2.5rem;
   margin: 2.3rem 0;
   text-align: center;
-  text-decoration-line: underline;
-  text-decoration-color: #b6c649;
 }
 
 .container-route {
@@ -37,26 +35,36 @@
   font-size: 1.4rem;
 }
 
+.container-button {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+.container-button__audio {
+  border: 2px solid black;
+}
+
 .container-route__info__details {
   font-size: 1rem;
 }
 
-.container-route-button {
+.container-route__info__justify {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.container-button__buttons {
   display: flex;
   justify-content: space-around;
-  margin: 2rem 0 1rem 0;
+  margin: 1.7rem 0 1.5rem 0;
 }
 
-.container-route-button__button {
-  padding: 1rem;
+.container-button__buttons_button {
   border: 2px solid black;
+  padding: 1rem;
 }
 
-.container-route-button__button__link {
-    color: black;
-}
-
-.fas {
-  margin-left: 0.5rem;
-  color: #b6c649;
+.container-button__buttons__button__link {
+  color: black;
 }

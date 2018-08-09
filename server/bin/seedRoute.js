@@ -12,45 +12,45 @@ const routes = [
   {
     name: "Madrid moderno",
     image:
-      "../../front/src/assets/images/ruta - Madrid moderno.jpg",
+      "../../assets/images/rutaMadridModerno.jpg",
     duration: "11 horas",
     description:
       "Una ruta en la que podrás hacer un recorrido por la historia más reciente de la ciudad de Madrid a través de sus edificios más significativos.",
     tracks: [
-      "5b6c0007c15b90317f19db65",
-      "5b6c0007c15b90317f19db66",
-      "5b6c0007c15b90317f19db67",
-      "5b6c0007c15b90317f19db68",
+      "5b6c6d6950b2100f7477c0a1",
+      "5b6c6d6950b2100f7477c0a2",
+      "5b6c6d6950b2100f7477c0a3",
+      "5b6c6d6950b2100f7477c0a4",
     ],
-    audio: "Audio"
+    audio: "../../assets/audios/Rutamadridmoderno.opus"
   },
   {
     name: "Madrid histórico",
     image:
-      "../../front/src/assets/images/ruta - Madrid histórico.jpg",
+      "../../assets/images/rutaMadridHistórico.jpg",
     duration: "10 horas",
     description:
       "En esta ruta haremos un recorrido por los edificios más emblemáticos de la ciudad de Madrid, realizando así un repaso por su historia",
     tracks: [
-      "5b6c0007c15b90317f19db6c",
-      "5b6c0007c15b90317f19db69",
-      "5b6c0007c15b90317f19db6a",
-      "5b6c0007c15b90317f19db6b",
+      "5b6c6d6950b2100f7477c0a5",
+      "5b6c6d6950b2100f7477c0a6",
+      "5b6c6d6950b2100f7477c0a8",
+      "5b6c6d6950b2100f7477c0a7",
     ],
-    audio: "Audio"
+    audio: "../../assets/audios/Rutamadridhistórico.opus"
   },
   {
     name: "El Triángulo del arte",
     image:
-      "../../front/src/assets/images/ruta - Museo del Prado.jpg",
+      "../../assets/images/rutaMuseoDelPrado.jpg",
     duration: "2 días",
-    description: "Todo el arte en una sola ruta",
+    description: "Todo el arte en una sola ruta visitando tres de los museos más imporantes de Madrid",
     tracks: [
-      "5b6c0007c15b90317f19db6d",
-      "5b6c0007c15b90317f19db6e",
-      "5b6c0007c15b90317f19db6f",
+      "5b6c6d6950b2100f7477c0a9",
+      "5b6c6d6950b2100f7477c0aa",
+      "5b6c6d6950b2100f7477c0ab",
     ],
-    audio: "Audio"
+    audio:""
   }
 ];
 

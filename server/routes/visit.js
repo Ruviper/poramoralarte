@@ -30,7 +30,7 @@ router.get("/:cityId", (req, res, next) => {
     let cityId = req.params.cityId;
     axios
       .get(
-        `https://api.sygictravelapi.com/1.0/es/places/list?parents=city:${cityId}&level=poi&limit=2`,
+        `https://api.sygictravelapi.com/1.0/es/places/list?parents=city:${cityId}&level=poi&limit=10`,
         {
           headers: { "x-api-key": APIKEY }
         }

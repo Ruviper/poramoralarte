@@ -1,9 +1,9 @@
 .container-comment-text {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 2rem;
-    padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding: 0 1.5rem;
 }
 
 .container-comment {
@@ -25,5 +25,5 @@
 }
 
 .container-comment__box__ul__username {
-    font-weight: bold;
+  font-weight: bold;
 }

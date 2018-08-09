@@ -21,8 +21,8 @@
           <a [routerLink]="['/routes']">Rutas</a>
         </li>
         <li *ngIf="sessionService.user">
-            <a [routerLink]="['/visits']">Puntos de interés - Madrid</a>
-          </li>
+          <a [routerLink]="['/visits']">Puntos de interés - Madrid</a>
+        </li>
         <li *ngIf="sessionService.user">
           <a [routerLink]="['/embassies']">Embajadas</a>
         </li>
@@ -30,7 +30,7 @@
     </div>
   </div>
   <div>
-    <img class="navbar__logo" src="../assets/logo.png">
+    <img class="navbar__logo" src="../assets/images/logo.png">
   </div>
   <div>
     <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,9 +47,9 @@
     </a>
     <div class="dropdown-menu navbar__logo__dropdown" aria-labelledby="dropdownMenuLink">
       <ul>
-          <li *ngIf="sessionService.user">
-              <a [routerLink]="['/profile']">Perfil</a>
-            </li>
+        <!-- <li *ngIf="sessionService.user">
+          <a [routerLink]="['/profile']">Perfil</a>
+        </li> -->
         <li *ngIf="!sessionService.user">
           <a [routerLink]="['/signup']">Registro</a>
         </li>

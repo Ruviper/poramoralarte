@@ -8,7 +8,9 @@
       <ul class="container-comment__box__ul">
         <li class="container-comment__box__ul__username">{{c.ownerId.username}}</li>
         <li>{{c.text}}</li>
-        <button (click)="deleteComment(c._id)">Eliminar comentario</button>
+        <div *ngIf='c.canDelete'>
+          <button (click)="deleteComment(c._id)">Eliminar comentario</button>
+        </div>
       </ul>
     </div>
   </div>

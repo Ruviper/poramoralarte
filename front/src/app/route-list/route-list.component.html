@@ -1,8 +1,4 @@
-<h2 class="route-title">
-  lista de rutas culturales
-</h2>
-
-
+<h2 class="route-title">rutas culturales</h2>
 <div *ngFor="let route of routes">
   <div class="container-route">
     <h3 class="container-route__title">{{route.name}}</h3>
@@ -11,21 +7,22 @@
       <p class="container-route__info">Duración</p>
       <p class="container-route__info__details">{{route.duration}}</p>
       <p class="container-route__info">Descripción</p>
-      <p class="container-route__info__details">{{route.description}}</p>
+      <p class="container-route__info__justify">{{route.description}}</p>
       <p class="container-route__info">Puntos de interés</p>
       <p class="container-route__info__details" *ngFor="let track of route.tracks">* {{track.name}}</p>
     </div>
-
-    <div class="container-route-button">
-      <button class="container-route-button__button">{{route.audio}}
-        <i class="fas fa-play"></i>
-      </button>
-      <button class="container-route-button__button">
-        <a [routerLink]="['/routes', route._id,'comments']" class="container-route-button__button__link">Comentarios</a>
-      </button>
-      <button class="container-route-button__button">
-        <a [routerLink]="['/routes', route._id]" class="container-route-button__button__link">+ Info</a>
-      </button>
+    <div class="container-button">
+      <div class="container-button__audio">
+        <audio [src]="route.audio" controls></audio>
+      </div>
+      <div class="container-button__buttons">
+        <button class="container-button__buttons_button">
+          <a [routerLink]="['/routes', route._id,'comments']" class="container-button__buttons__button__link">Comentarios</a>
+        </button>
+        <button class="container-button__buttons_button">
+          <a [routerLink]="['/routes', route._id]" class="container-button__buttons__button__link">+ Info</a>
+        </button>
+      </div>
     </div>
   </div>
 </div>

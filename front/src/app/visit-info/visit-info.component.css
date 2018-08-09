@@ -1,10 +1,43 @@
-    agm-map {
-    height: 300px;
-    width: 100%;
-    }
+agm-map {
+  height: 300px;
+  width: 100%;
+}
 
-    .mapa {
-    margin: 0.5rem;
-    border: 2px solid #2c4251;
-    margin: 2.5rem 0;
-    }
+iframe {
+    margin-top: 1rem;
+}
+
+.mapa {
+  margin: 0.5rem;
+  border: 2px solid #2c4251;
+  margin: 2.5rem 0;
+}
+
+.container-visit-info {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 2rem;
+  padding: 1rem;
+  flex-direction: column;
+  box-shadow: 4px 4px 8px #888888;
+  background-color: #fff;
+  align-items: center;
+}
+
+.container-visit-info__title {
+  margin: 1rem 0 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.container-visit-info__info {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.container-visit-info__detail {
+  font-size: 1rem;
+  text-align: center;
+}

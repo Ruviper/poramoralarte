@@ -11,12 +11,11 @@ Track.collection.drop();
 const tracks = [
   {
     name: "Museo de escultura al aire libre",
-    image:
-      "../../front/src/assets/images/Museo de escultura al aire libre.jpg",
+    image: "../../assets/images/Museo de escultura al aire libre.jpg",
     duration: "2 horas",
     schedules: "Abierto todo el día",
     price: "Gratuito",
-    audio: "Audio",
+    audio: "../../assets/audios/Museoalairelibre.opus",
     address: "Paseo del castellana, 40, 28046 Madrid",
     description:
       "Situado bajo un paso elevado. Destaca la obra de 'La sirena varada' de Chillida, nuestro escultor contemporáneo más galardonado",
@@ -27,11 +26,10 @@ const tracks = [
   },
   {
     name: "Complejo comercial ABC Serrano",
-    image:
-      "../../front/src/assets/images/Complejo comercial ABC Serrano.jpg",
+    image: "../../assets/images/Complejo comercial ABC Serrano.jpg",
     duration: "3 horas",
     schedules: "L a S 10 a 21:00 / D cerrado",
-    price: "--",
+    price: "Gratuito",
     audio: "Audio",
     address: "Calle de Serrano, 61, 28006 Madrid",
     description:
@@ -43,12 +41,11 @@ const tracks = [
   },
   {
     name: "Museo de Ciencias Naturales",
-    image:
-      "../../front/src/assets/images/Museo de ciencias naturales.jpg",
+    image: "../../assets/images/Museo de ciencias naturales.jpg",
     duration: "5 horas",
     schedules: "M a V de 10:00 a 17:00 / S y D de 10 a 20",
     price: "Entrada general 6€",
-    audio: "Audio",
+    audio: "../../assets/audios/Museodecienciasnaturales.opus",
     address: "Calle de José Gutiérrez Abascal, 2, 28006 Madrid",
     description:
       "Situado sobre una colina es considerado como uno de los más importantes de Europa por su colección de dinosaurios. En los jardines tenemos un monumento en forma de cubo hueco dedicado a nuestra Constitución de 1978. ",
@@ -59,11 +56,10 @@ const tracks = [
   },
   {
     name: "Torre Picasso",
-    image:
-      "../../front/src/assets/images/Torre Picasso.jpg",
+    image: "../../assets/images/Torre Picasso.jpg",
     duration: "2 horas",
     schedules: "L a V de 7 a 22:30 / S y D de 10 a 15",
-    price: "50 €",
+    price: "Gratuito",
     audio: "Audio",
     address: "Pablo Ruiz Picasso, s/n. 28020.",
     description: "Un museo espectacular",
@@ -74,8 +70,7 @@ const tracks = [
   },
   {
     name: "Palacio Real",
-    image:
-      "../../front/src/assets/images/Palacio Real.jpg",
+    image: "../../assets/images/Palacio Real.jpg",
     duration: "4 horas",
     schedules: "Abril a septiembre de 10 a 20 / Octubre a Marzo de 10 a 18",
     price: "Tarifa básica 10€",
@@ -90,11 +85,10 @@ const tracks = [
   },
   {
     name: "Puerta del Sol",
-    image:
-      "../../front/src/assets/images/Puerta del Sol.jpg",
+    image: "../../assets/images/Puerta del Sol.jpg",
     duration: "2 horas",
     schedules: "Abierto todo el día",
-    price: "--",
+    price: "Gratuito",
     audio: "Audio",
     address: "Plaza de la Puerta del Sol, s/n, 28013 Madrid",
     description:
@@ -106,11 +100,10 @@ const tracks = [
   },
   {
     name: "Parque del Retiro",
-    image:
-      "../../front/src/assets/images/Parque del Retiro.jpg",
+    image: "../../assets/images/Parque del Retiro.jpg",
     duration: "3 horas",
     schedules: "Abril a septiembre de 6 a 00 / Invierno a octubre de 6 a 22",
-    price: "--",
+    price: "Gratuito",
     audio: "Audio",
     address: "Plaza de la Independencia, 7, 28001 Madrid",
     description:
@@ -122,11 +115,10 @@ const tracks = [
   },
   {
     name: "Templo de Debod",
-    image:
-      "../../front/src/assets/images/Templo de Debod.jpg",
+    image: "../../assets/images/Templo de Debod.jpg",
     duration: "2 horas",
     schedules: "Cerrado por problemas técnicos",
-    price: "--",
+    price: "Gratuito",
     audio: "Audio",
     address: "Calle Ferraz, 1, 28008, Madrid",
     description:
@@ -138,15 +130,14 @@ const tracks = [
   },
   {
     name: "Museo del Prado",
-    image:
-      "../../front/src/assets/images/Museo del Prado.jpg",
+    image: "../../assets/images/Museo del Prado.jpg",
     duration: "7 horas",
     schedules: "L a S de 10:00 a 20:00 / D de 10:00 a 19:00",
     price: "Entrada general 15€",
     audio: "Audio",
     address: "Paseo del Prado, s/n, 28014 Madrid",
     description:
-      "El Museo del Prado tiene la colección de pintura española más completa del mundo. El Prado cuenta con una valiosa colección de 8.600 cuadros y más de 700 esculturas. Es recomendable consultar una guía y preparar la visita antes de entrar en el museo.",
+      "Es uno de los más visitados e importantes del mundo. singularmente rico en cuadros de los siglos XVI al XIX. El Prado debe su origen a la afición coleccionista de las dinastías gobernantes a lo largo de varios siglos. Aquí podemos disfrutar de cuadros como 'Las Meninas', 'El Jardín de las Delicias', 'La Maja Desnuda' o 'Las tres gracias'",
     coordinates: {
       lat: 40.4137818,
       lng: -3.6943211
@@ -154,15 +145,14 @@ const tracks = [
   },
   {
     name: "Museo Reina Sofía",
-    image:
-      "../../front/src/assets/images/Museo Reina Sofía.jpg",
+    image: "../../assets/images/Museo Reina Sofía.jpg",
     duration: "5 horas",
     schedules: "L a V de 10:00 a 21:00",
     price: "Entrada general 10€",
     audio: "Audio",
     address: "Calle de Santa Isabel, 52, 28012 Madrid",
     description:
-      "El Museo Reina Sofía ofrece al visitante amplias colecciones de cuadros de pintores españoles tan importantes como Pablo Picasso, Salvador Dalí y Joan Miró. El cuadro más conocido del museo es el Guernica de Picasso, realizado en memoria del trágico bombardeo aéreo de la homónima ciudad vasca durante la Guerra Civil.",
+      "Alberga obras del siglo XX y contemporáneo. Tomo como sede el antiguo Hospital General de San Carlos, gran edificio neoclásico del siglo XVIII. En la colección permanente del museo destaca su núcleo de obras de grandes artistas españoles del siglo XX, especialmente Pablo Picasso, Salvador Dalí y Joan Miró.",
     coordinates: {
       lat: 40.4079123,
       lng: -3.6967509
@@ -170,14 +160,14 @@ const tracks = [
   },
   {
     name: "Museo Thyssen",
-    image:
-      "../../front/src/assets/images/Museo Thyssen.jpg",
+    image: "../../assets/images/Museo Thyssen.jpg",
     duration: "6 horas",
     schedules: "Consultar web",
     price: "Entrada general 12€",
     audio: "Audio",
     address: "Paseo del Prado, 8, 28014 Madrid",
-    description: "Un museo espectacular",
+    description:
+      "La colección del Museo Thyssen-Bornemisza se compone de cerca de 1000 obras que el Estado español compró a la familia Thyssen-Bornemisza en julio de 1993. El museo se encuentra en un emplazamiento privilegiado, el Palacio de Villahermosa. Este palacio fue construido a finales del siglo XVIII y es un claro ejemplo de arquitectura neoclásica madrileña. El museo tiene tres plantas; para recorrerlo es recomendable empezar por la segunda planta para posteriormente bajar a la primera y a la planta baja. Durante este recorrido veremos la evolución histórica de la pintura, con obras que abarcan los siglos XVII-XX.",
     coordinates: {
       lat: 40.4160406,
       lng: -3.6971194

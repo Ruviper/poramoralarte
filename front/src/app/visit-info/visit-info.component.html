@@ -1,29 +1,22 @@
-<p>
-  visit-info works!
-</p>
-
 <div class="mapa" *ngIf="mapOn">
   <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-    <div *ngFor="let visit of visits">
+    <div *ngIf="visit">
       <agm-marker [latitude]="visit.location.lat" [longitude]="visit.location.lng">
         <agm-info-window [disableAutoPan]="true" [isOpen]="visible">
-          <strong>hola</strong>
+          <strong>{{visit.name}}</strong>
         </agm-info-window>
       </agm-marker>
     </div>
   </agm-map>
 </div>
-
-<div *ngFor="let visit of visits">
-    <div class="container-visit">
-      <h3 class="container-visit__title">{{visit.name}}</h3>
-      <div class="container-visit__img">
-        <img src="{{visit.thumbnail_url}}" alt="">
-      </div>
-      <p class="container-visit__info">{{visit.perex}}</p>
-      <p class="container-visit__info">{{visit.address}}</p>
-      <div class="container-visit__button">
-      </div>
-    </div>
-  
+<div *ngIf="visit">
+  <div class="container-visit-info">
+    <iframe [src]="visit.video | safe" height="250" width="250"></iframe>
+    <h3 class="container-visit-info__title">{{visit.name}}</h3>
+    <p>{{visit.description.text}}</p>
+    <p class="container-visit-info__info">
+      <b>Dirección</b>
+    </p>
+    <p class="container-visit-info__detail">{{visit.address}}</p>
   </div>
+</div>

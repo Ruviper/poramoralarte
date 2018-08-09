@@ -10,17 +10,20 @@ import { ActivatedRoute } from "@angular/router";
 export class EmbassyComponent implements OnInit {
   lat: Array<number> = [40.4137818];
   lng: Array<number> = [-3.6921270999999933];
-  embassies: Array<any> = [{
-      coordinates: { lat:0, lng:0 }
-    }];
+  zoom: Number = 13;
+  embassies: Array<any> = [
+    {
+      coordinates: { lat: 0, lng: 0 }
+    }
+  ];
 
   constructor(
     private embassyService: EmbassyService,
     public route: ActivatedRoute
   ) {
     this.embassyService.getList().subscribe(data => {
-      console.log(data)
-      this.embassies = data
+      console.log(data);
+      this.embassies = data;
     });
   }
 

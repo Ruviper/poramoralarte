@@ -1,8 +1,5 @@
 <div *ngIf="sessionService.user">
-    <p>{{sessionService.user.username}}</p>
-    <p>{{sessionService.user.password}}</p>
-
-
-    
-    <button [routerLink]="['/']">Volver</button>
-  </div>
+  <p>{{sessionService.user.username}}</p>
+  <p>{{sessionService.user.password}}</p>
+  <button [routerLink]="['/']">Volver</button>
+</div>

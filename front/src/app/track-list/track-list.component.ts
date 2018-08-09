@@ -11,21 +11,24 @@ import { ActivatedRoute } from "@angular/router";
 export class TrackListComponent implements OnInit {
   lat: Array<number> = [40.4137818];
   lng: Array<number> = [-3.6921270999999933];
-  tracks: Array<any> = [{
-    coordinates: {lat:0, lng:0}
-  }];
+  zoom: Number = 13;
+  tracks: Array<any> = [
+    {
+      coordinates: { lat: 0, lng: 0 }
+    }
+  ];
 
   constructor(
     private trackService: TrackService,
     public routeService: RouteService,
     public route: ActivatedRoute
   ) {
-    this.route.params.subscribe(params => 
+    this.route.params.subscribe(params =>
       this.routeService.get(params.id).subscribe(data => {
-        console.log(data.tracks)
+        console.log(data.tracks);
         this.tracks = data && data.tracks;
       })
-    )
+    );
   }
 
   ngOnInit() {}

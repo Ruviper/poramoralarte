@@ -27,40 +27,36 @@ export class CommentTracksComponent implements OnInit {
   ) {
     this.routeAct.params.subscribe(params =>
       this.trackService.get(params.id).subscribe(data => {
-        console.log(data)
         this.track = data;
         this.refreshComments();
       })
     );
-    this.sessionService.isLogged().subscribe(user => this.comment.ownerId = user._id)
+    this.sessionService
+      .isLogged()
+      .subscribe(user => (this.comment.ownerId = user._id));
   }
 
   ngOnInit() {}
   refreshComments() {
     this.commentService
-      .getComments(this.track._id, 'tracks')
+      .getComments(this.track._id, "tracks")
       .subscribe(comments => {
-        this.comments = comments
+        this.comments = comments;
       });
   }
 
   deleteComment(id) {
-    this.commentService
-      .remove(id)
-      .subscribe(() => this.refreshComments() );
+    this.commentService.remove(id).subscribe(() => this.refreshComments());
   }
 
   saveComment() {
     this.comments.push(this.comment);
     this.commentService
-      .saveComment(this.track._id, this.comment, 'tracks')
+      .saveComment(this.track._id, this.comment, "tracks")
       .subscribe(() => {
-        
         this.refreshComments();
       });
     this.comment.title = "";
     this.comment.text = "";
   }
 }
-
-

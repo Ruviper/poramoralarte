@@ -26,6 +26,7 @@ import { EmbassyService } from '../services/embassy';
 import { NavbarComponent } from './navbar/navbar.component';
 import { VisitComponent } from './visit/visit.component';
 import { VisitInfoComponent } from './visit-info/visit-info.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { VisitInfoComponent } from './visit-info/visit-info.component';
     EmbassyComponent,
     NavbarComponent,
     VisitComponent,
-    VisitInfoComponent
+    VisitInfoComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

@@ -3,9 +3,8 @@ const Schema   = mongoose.Schema;
 
 const embassySchema = new Schema({
   name: { type: String },
-  image: { type: String },
   address: { type: String },
-  schedules: { type: String },
+  phone: { type: String },
   coordinates: {
       lat: Number,
       lng: Number

@@ -17,6 +17,8 @@ export class CommentRoutesComponent implements OnInit {
     text: "",
     ownerId: ""
   };
+  user;
+  canDelete: boolean = false;
 
   constructor(
     private commentService: CommentService,
@@ -28,12 +30,13 @@ export class CommentRoutesComponent implements OnInit {
     this.routeAct.params.subscribe(params =>
       this.routeService.get(params.id).subscribe(data => {
         this.route = data;
-        this.refreshComments();
+        this.sessionService.isLogged().subscribe(user => {
+          this.user = user;
+          this.comment.ownerId = user._id;
+          this.refreshComments();
+        });
       })
     );
-    this.sessionService
-      .isLogged()
-      .subscribe(user => (this.comment.ownerId = user._id));
   }
 
   ngOnInit() {}
@@ -43,6 +46,10 @@ export class CommentRoutesComponent implements OnInit {
       .getComments(this.route._id, "routes")
       .subscribe(comments => {
         this.comments = comments;
+        this.comments.map(c => {
+          if (this.user._id == c.ownerId._id) c.canDelete = true;
+          else c.canDelete = false;
+        });
       });
   }
 

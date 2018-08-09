@@ -16,7 +16,7 @@ agm-map {
   padding: 0.5rem;
   flex-direction: column;
   box-shadow: 4px 4px 8px #888888;
-  background-color: #fff;   
+  background-color: #fff;
 }
 
 .container-visit__img {
@@ -34,7 +34,7 @@ agm-map {
 
 .container-visit__info {
   font-size: 1rem;
-  text-align: center;
+  text-align: justify;
 }
 
 .container-visit__button {

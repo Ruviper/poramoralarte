@@ -1,5 +1,5 @@
 <div class="mapa">
-  <agm-map [latitude]="embassies[0].coordinates.lat" [longitude]="embassies[0].coordinates.lng">
+  <agm-map [latitude]="embassies[0].coordinates.lat" [longitude]="embassies[0].coordinates.lng" [zoom]="zoom">
     <div *ngFor="let embassy of embassies">
       <agm-marker [latitude]="embassy.coordinates.lat" [longitude]="embassy.coordinates.lng">
         <agm-info-window [disableAutoPan]="true" [isOpen]="visible">
@@ -9,7 +9,6 @@
     </div>
   </agm-map>
 </div>
-
 <div *ngFor='let embassy of embassies'>
   <div class="container-embassy">
     <h3 class="container-embassy__title">{{embassy.name}}</h3>

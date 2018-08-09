@@ -7,6 +7,7 @@ const trackSchema = new Schema({
   duration: { type: String },
   schedules: { type: String },
   price: { type: String },
+  address: { type: String },
   audio: { type: String },
   description: { type: String },
   coordinates: {
