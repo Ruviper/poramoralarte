@@ -13,7 +13,7 @@
       </svg>
     </a>
     <div *ngIf="sessionService.user" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <ul class="dropdown-menu__ul" >
+      <ul class="dropdown-menu__ul">
         <li *ngIf="sessionService.user">
           <a [routerLink]="['/']">Inicio</a>
         </li>
