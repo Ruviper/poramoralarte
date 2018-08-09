@@ -26,12 +26,13 @@ export class VisitInfoComponent implements OnInit {
     public routeAct: ActivatedRoute
   ) {
     this.routeAct.params.subscribe(params => {
+      console.log(params.id)
       this.visitService.getPlaces(params.id).subscribe(visitPlace => {
         this.visit = visitPlace;
         this.lat = this.visit.location.lat;
         this.lng = this.visit.location.lng;
         this.mapOn = true;
-      })
+      });
     });
   }
 

@@ -12,8 +12,8 @@ const tracks = [
   {
     name: "Museo de escultura al aire libre",
     image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
+      "../../front/src/assets/images/Museo de escultura al aire libre.jpg",
+    duration: "2 horas",
     schedules: "Abierto todo el día",
     price: "Gratuito",
     audio: "Audio",
@@ -28,8 +28,8 @@ const tracks = [
   {
     name: "Complejo comercial ABC Serrano",
     image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
+      "../../front/src/assets/images/Complejo comercial ABC Serrano.jpg",
+    duration: "3 horas",
     schedules: "L a S 10 a 21:00 / D cerrado",
     price: "--",
     audio: "Audio",
@@ -44,9 +44,9 @@ const tracks = [
   {
     name: "Museo de Ciencias Naturales",
     image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
+      "../../front/src/assets/images/Museo de ciencias naturales.jpg",
     duration: "5 horas",
-    schedules: "M a V de 10:00 a 17:00 / S y D de 10 a 20 / D cerrado",
+    schedules: "M a V de 10:00 a 17:00 / S y D de 10 a 20",
     price: "Entrada general 6€",
     audio: "Audio",
     address: "Calle de José Gutiérrez Abascal, 2, 28006 Madrid",
@@ -58,25 +58,25 @@ const tracks = [
     }
   },
   {
-    name: "Nuevos Ministeriossssssssssssssssssss",
+    name: "Torre Picasso",
     image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
-    schedules: "09:00 a 14:00 / 17:00 a 20:30",
+      "../../front/src/assets/images/Torre Picasso.jpg",
+    duration: "2 horas",
+    schedules: "L a V de 7 a 22:30 / S y D de 10 a 15",
     price: "50 €",
     audio: "Audio",
-    address: "Plaza mayor, s/n",
+    address: "Pablo Ruiz Picasso, s/n. 28020.",
     description: "Un museo espectacular",
     coordinates: {
-      lat: 50.46,
-      lng: -4.5
+      lat: 40.450278,
+      lng: -3.6946887
     }
   },
   {
     name: "Palacio Real",
     image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
+      "../../front/src/assets/images/Palacio Real.jpg",
+    duration: "4 horas",
     schedules: "Abril a septiembre de 10 a 20 / Octubre a Marzo de 10 a 18",
     price: "Tarifa básica 10€",
     audio: "Audio",
@@ -85,14 +85,14 @@ const tracks = [
       "Este Palacio, conocido como de Oriente, fue construido para reemplazar el antiguo Alcázar de Felipe II, que estaba en el mismo lugar y fue destruido por un incendio en 1734. Sus arquitectos fueron Jubara, Sachetti y Sabatini que fue el diseñador de los jardines. Está considerado como el Palacio mejor conservado de Europa. No está habitado.",
     coordinates: {
       lat: 40.417955,
-      lng: -3.7318215
+      lng: -3.716506
     }
   },
   {
     name: "Puerta del Sol",
     image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
+      "../../front/src/assets/images/Puerta del Sol.jpg",
+    duration: "2 horas",
     schedules: "Abierto todo el día",
     price: "--",
     audio: "Audio",
@@ -107,8 +107,8 @@ const tracks = [
   {
     name: "Parque del Retiro",
     image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
+      "../../front/src/assets/images/Parque del Retiro.jpg",
+    duration: "3 horas",
     schedules: "Abril a septiembre de 6 a 00 / Invierno a octubre de 6 a 22",
     price: "--",
     audio: "Audio",
@@ -121,123 +121,66 @@ const tracks = [
     }
   },
   {
-    name: "TEMPLO DE DEBODDDDDDDD",
+    name: "Templo de Debod",
     image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
-    schedules: "09:00 a 14:00 / 17:00 a 20:30",
-    price: "50 €",
+      "../../front/src/assets/images/Templo de Debod.jpg",
+    duration: "2 horas",
+    schedules: "Cerrado por problemas técnicos",
+    price: "--",
     audio: "Audio",
-    address: "Plaza mayor, s/n",
-    description: "Un museo espectacular",
+    address: "Calle Ferraz, 1, 28008, Madrid",
+    description:
+      "Construido en el siglo IV antes de Cristo, fue un regalo de las autoridades egipcias como agradecimiento a la colaboración española en la Campaña de Nubia, el templo, desmontado y embalado en cajas, partió del puerto de Alejandría.",
     coordinates: {
-      lat: 50.46,
-      lng: -4.5
+      lat: 40.4240216,
+      lng: -3.7199635
+    }
+  },
+  {
+    name: "Museo del Prado",
+    image:
+      "../../front/src/assets/images/Museo del Prado.jpg",
+    duration: "7 horas",
+    schedules: "L a S de 10:00 a 20:00 / D de 10:00 a 19:00",
+    price: "Entrada general 15€",
+    audio: "Audio",
+    address: "Paseo del Prado, s/n, 28014 Madrid",
+    description:
+      "El Museo del Prado tiene la colección de pintura española más completa del mundo. El Prado cuenta con una valiosa colección de 8.600 cuadros y más de 700 esculturas. Es recomendable consultar una guía y preparar la visita antes de entrar en el museo.",
+    coordinates: {
+      lat: 40.4137818,
+      lng: -3.6943211
     }
   },
   {
     name: "Museo Reina Sofía",
     image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
+      "../../front/src/assets/images/Museo Reina Sofía.jpg",
     duration: "5 horas",
-    schedules: "09:00 a 14:00 / 17:00 a 20:30",
-    price: "50 €",
+    schedules: "L a V de 10:00 a 21:00",
+    price: "Entrada general 10€",
     audio: "Audio",
-    address: "Plaza mayor s/n",
-    description: "Un museo espectacular",
+    address: "Calle de Santa Isabel, 52, 28012 Madrid",
+    description:
+      "El Museo Reina Sofía ofrece al visitante amplias colecciones de cuadros de pintores españoles tan importantes como Pablo Picasso, Salvador Dalí y Joan Miró. El cuadro más conocido del museo es el Guernica de Picasso, realizado en memoria del trágico bombardeo aéreo de la homónima ciudad vasca durante la Guerra Civil.",
     coordinates: {
-      lat: 50.46,
-      lng: -4.5
+      lat: 40.4079123,
+      lng: -3.6967509
     }
   },
   {
-    name: "Museo Reina Sofía",
+    name: "Museo Thyssen",
     image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
-    schedules: "09:00 a 14:00 / 17:00 a 20:30",
-    price: "50 €",
+      "../../front/src/assets/images/Museo Thyssen.jpg",
+    duration: "6 horas",
+    schedules: "Consultar web",
+    price: "Entrada general 12€",
     audio: "Audio",
-    address: "Plaza mayor s/n",
+    address: "Paseo del Prado, 8, 28014 Madrid",
     description: "Un museo espectacular",
     coordinates: {
-      lat: 50.46,
-      lng: -4.5
-    }
-  },
-  {
-    name: "Museo Reina Sofía",
-    image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
-    schedules: "09:00 a 14:00 / 17:00 a 20:30",
-    price: "50 €",
-    audio: "Audio",
-    address: "Plaza mayor s/n",
-    description: "Un museo espectacular",
-    coordinates: {
-      lat: 50.46,
-      lng: -4.5
-    }
-  },
-  {
-    name: "Museo Reina Sofía",
-    image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
-    schedules: "09:00 a 14:00 / 17:00 a 20:30",
-    price: "50 €",
-    audio: "Audio",
-    address: "Plaza mayor s/n",
-    description: "Un museo espectacular",
-    coordinates: {
-      lat: 50.46,
-      lng: -4.5
-    }
-  },
-  {
-    name: "Museo Reina Sofía",
-    image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
-    schedules: "09:00 a 14:00 / 17:00 a 20:30",
-    price: "50 €",
-    audio: "Audio",
-    address: "Plaza mayor s/n",
-    description: "Un museo espectacular",
-    coordinates: {
-      lat: 50.46,
-      lng: -4.5
-    }
-  },
-  {
-    name: "Museo Reina Sofía",
-    image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
-    schedules: "09:00 a 14:00 / 17:00 a 20:30",
-    price: "50 €",
-    audio: "Audio",
-    address: "Plaza mayor s/n",
-    description: "Un museo espectacular",
-    coordinates: {
-      lat: 50.46,
-      lng: -4.5
-    }
-  },
-  {
-    name: "Museo Reina Sofía",
-    image:
-      "https://www.nattivus.com/img/actividades/1_Visitas_a_Pie/7_Madrid_de_los_Austrias/visita-austrias-A.jpg",
-    duration: "5 horas",
-    schedules: "09:00 a 14:00 / 17:00 a 20:30",
-    price: "50 €",
-    audio: "Audio",
-    address: "Plaza mayor s/n",
-    description: "Un museo espectacular",
-    coordinates: {
-      lat: 50.46,
-      lng: -4.5
+      lat: 40.4160406,
+      lng: -3.6971194
     }
   }
 ];
