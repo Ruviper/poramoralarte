@@ -9,10 +9,12 @@
     </div>
   </agm-map>
 </div>
-<div *ngFor='let embassy of embassies'>
-  <div class="container-embassy">
-    <h3 class="container-embassy__title">{{embassy.name}}</h3>
-    <p class="container-embassy__info">{{embassy.address}}</p>
-    <p class="container-embassy__info">{{embassy.phone}}</p>
+<div class="margin">
+  <div *ngFor='let embassy of embassies'>
+    <div class="container-embassy">
+      <h3 class="container-embassy__title">{{embassy.name}}</h3>
+      <p class="container-embassy__info">{{embassy.address}}</p>
+      <p class="container-embassy__info">{{embassy.phone}}</p>
+    </div>
   </div>
 </div>
